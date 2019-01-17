@@ -1,0 +1,18 @@
+{
+	"responseCode": {
+		"status": 400,
+		"descripcion": "dsasdf"
+	},
+	"data": [
+		{
+			"id": 1,
+			"title": "Are You With Me",
+			"resume": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt minima culpa cum accusantium? Minima sapiente assumenda atque similique labore dolores cumque placeat vel, magnam dicta pariatur libero vitae, sunt praesentium.",
+			"resumeImg": "src/videos/imgs/areYouWithMePrev.png",
+			"videoUrl": "src/videos/areYouWithMe.mp4",
+			"isNew": true,
+			"creationDate": "2018-05-11T05:00:00.000Z",
+			"duration": "2:16"
+		}
+	]
+}

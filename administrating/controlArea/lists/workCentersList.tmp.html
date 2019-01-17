@@ -1,0 +1,31 @@
+<ul class="users-target-list">
+	<li class="user-target-item" layout ng-class="{activeTarget: center.status == 1, noActiveTarget: center.status != 1}" ng-repeat="center in targetUsers">
+		<div class="itm-column first-column" flex="45">
+			<span nd-disabled="!withAminPriviledges" ng-class="{'cursor-not-allowed': !withAminPriviledges}" class="edit-button no-border-no-outline" ng-click="adminDialogShow($event, 'edit', center)">
+				<span class="icon-model icon-edit-pencil"></span>
+			</span>
+			<span class="data-span">
+				{{center.name}}
+			</span>
+		</div>
+		<div class="itm-column second-column" flex="25">
+			<span class="data-icon-wrapper">
+				<span class="icon-model" ng-class="secondColumnIcon"></span>
+			</span>
+			<span class="data-span">
+				{{center.contactData.phone}}
+			</span>
+		</div>
+		<div class="itm-column third-column" flex="30">
+			<span class="data-icon-wrapper">
+				<span class="icon-model" ng-class="thirdColumnIcon"></span>
+			</span>
+			<span class="data-span">
+				{{center.contactData.name}}
+			</span>
+		</div>
+	</li>
+	<li class="user-target-item only-when-no-body">
+      No encontramos a nadie bajo ese criterio
+    </li>
+</ul>

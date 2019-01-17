@@ -1,0 +1,22 @@
+<div layout='column' class="profile-control-area-container">
+	<!-- from accounts -->
+
+	<div class="video-list-wrapper" layout md-whiteframe="2" ng-if="onTutos">
+		<div class="video-itm no-border-no-outline" ng-repeat="tuto in tutorialsColl | orderBy: actualOrderCriteria.criteria : actualOrderCriteria.reverse" ng-click="seeTutorial(tuto)">
+			<div class="image-background-model resume-img-div" ng-style="{'background-image': 'url('+ tuto.resumeImg + ')'}"></div>
+			<p class="video-title">
+				{{tuto.title}}
+			</p>
+			<div class="micro-info-wrapper">
+				<span class="duration-span">
+					{{tuto.duration}}
+				</span>
+				<div class="recent-video-highlighter" ng-if="tuto.isNew">
+					<span class="red-dot-span"></span> NUEVO
+				</div>
+			</div>
+		</div>
+		<div style="clear: both;"></div>
+	</div>
+	
+</div>

@@ -1,0 +1,121 @@
+{
+	"responseCode": {
+		"status": 200,
+		"descripcion": ""
+	},
+	"data": [
+		{
+			"cellPhoneNumber":"+52189798723",
+			"cveEmail":"emmanuel.ruiz@hsbc.com.mx",
+			"profileImg": "src/images/avatar-0.jpg",
+			"imei":"",
+			"integrations":{
+				"success": 43,
+				"pending": 100,
+				"notStarting": 55, 
+				"total": 198
+			},
+			"rol":"INTEGRADOR",
+			"status":1,
+			"lastLocations": {
+				"latitude": 19.4479193,
+	            "longitude": -99.1579794
+			},
+			"latitude": 19.4479193,
+            "longitude": -99.1579794,
+			"userId": 1,
+			"addressName": "José J. Arriaga",
+			"userName":"Emmanuel Ruiz"
+		},
+		{
+			"cellPhoneNumber":"15555215554",
+			"cveEmail":"miguelangel@multiplica.com",
+			"profileImg": "src/images/avatar-1.jpg",
+			"integrations":{
+				"success": 109,
+				"pending": 104,
+				"notStarting": 42, 
+				"total": 255
+			},
+			"rol":"INTEGRADOR",
+			"status":1,
+			"lastLocations": {
+				"latitude": 19.4168307,
+	    	    "longitude": -99.1502790
+			},
+			"latitude": 19.4168307,
+    	    "longitude": -99.1502790,
+			"userId": 2,
+			"addressName": "José J. Arriaga",
+			"userName":"Miguel Angel Ocampo Mendoza"
+		},
+		{
+			"cellPhoneNumber":"+521231722",
+			"cveEmail":"viri@multiplica.com",
+			"profileImg": "src/images/avatar-2.jpg",
+			"integrations":{
+				"success": 88,
+				"pending": 89,
+				"notStarting": 52, 
+				"total": 229
+			},
+			"rol":"INTEGRADOR",
+			"status": 1,
+			"lastLocations": {
+				"latitude": 19.4194685,
+	            "longitude": -99.1223729
+			},
+			"latitude": 19.4194685,
+            "longitude": -99.1223729,
+			"userId": 3,
+			"addressName": "José J. Arriaga",
+			"userName":"Viridiana Guzman"
+		},
+		{
+			"cellPhoneNumber":"+5218908903",
+			"cveEmail":"ale@multiplica.com",
+			"profileImg": "src/images/avatar-3.jpg",
+			"imei":"",
+			"integrations":{
+				"success": 36,
+				"pending": 108,
+				"notStarting": 44, 
+				"total": 188
+			},
+			"rol":"INTEGRADOR",
+			"status":0,
+			"lastLocations": {
+				"latitude": 19.4139174,
+	            "longitude": -99.1573108
+			},
+			"latitude": 19.4139174,
+            "longitude": -99.1573108,
+			"userId": 4,
+			"addressName": "José J. Arriaga",
+			"userName":"Ale Najera"
+		},
+		{
+			"cellPhoneNumber":"+527223123825",
+			"cveEmail":"omar.consuelo@hsbc.com",
+			"profileImg": "src/images/avatar-4.jpg",
+			"imei":"",
+			"integrations":{
+				"success": 52,
+				"pending": 85,
+				"notStarting": 53, 
+				"total": 190
+			},
+			"rol":"INTEGRADOR",
+			"status":0,
+			"lastLocations": {
+				"latitude": 19.4699137,
+	            "longitude": -99.1562726
+			},
+			"latitude": 19.4699137,
+            "longitude": -99.1562726,
+			"userId": 5,
+			"addressName": "José J. Arriaga",
+			"userName":"Omar Consuelo"
+		}
+	]
+}

@@ -1,0 +1,149 @@
+<md-dialog class="dialog-box" aria-label="accounts-actions-controlls">
+
+    <md-toolbar class="dialog-header">
+      <div class="md-toolbar-tools">
+        <h2>{{action + ' de cuentas'}}</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancelDialog()">
+          <svg fill="#fff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content class="dialog-container" layout="column">
+      <div class="inputWrapper" layout flex="noshrink" ng-if="!deleting && !lastAccept">
+        <input type="text" class="integrator-searcher no-border-no-outline" placeholder="Buscar integrador" flex="90" ng-keyup="searching($event)">
+        <span class="icon-model icon-search"></span>
+      </div>
+
+      <div class="status-texts" ng-if="deleting || lastAccept">
+        <span ng-if="!deleting && !cancelled">
+          Las siguientes cuentas han sido {{ buttonText.slice(0,2) | lowercase }}signadas a:
+        </span>
+        
+        <span ng-if="deleting && !lastAccept && !cancelled">
+          ¿Deseas eliminar las siguientes cuentas?
+        </span>
+
+        <span ng-if="deleting && lastAccept && !cancelled">
+          Las siguientes cuentas han sido eliminadas:
+        </span>
+
+        <span ng-if="cancelled">
+          Se ha revertido el estatus de las siguientes cuentas:
+        </span>
+      </div>
+
+      <ul class="integradores-list" flex="noshrink" ng-if="!deleting && !lastAccept">
+        <li class="integrador-itm no-border-no-outline" ng-repeat="integrador in agents" ng-click="selectingAgent($event, integrador)">
+          <div class="integrador-full-wrapper" layout>
+            <img ng-src="{{(integrador.profileImg) ? integrador.profileImg : folderStructureUrl + 'src/images/myAvatar.png'}}" class="md-avatar">
+            <div class="agent-info-wrapper" layout flex="90">
+                <div class="name-block" layout="column" flex="45">
+                    <div class="name">
+                      {{integrador.userName}}
+                    </div>
+                    <div class="results-color-resume" layout>
+                        <div class="not-starting-integrations bar-integrations c-red" ng-style="{width: (integrador.integrations.notStarting / (integrador.integrations.total / 100)) + '%'}"></div>
+                        <div class="pending-integrations bar-integrations c-blue" ng-style="{width: (integrador.integrations.pending / (integrador.integrations.total / 100)) + '%'}"></div>
+                        <div class="success-integrations bar-integrations c-green" ng-style="{width: (integrador.integrations.success / (integrador.integrations.total / 100)) + '%'}"></div>
+                    </div>
+                </div>
+                <div layout flex="50" flex-offset="5" class="agent-integrations-info-details">
+                    <div class="info-item" flex="25">
+                        Diarias: {{integrador.accountsInfo.daily}}
+                    </div>
+                    <div class="info-item" flex="30">
+                        Totales: {{integrador.integrations.total}}
+                    </div>
+                    <div class="info-item" flex="45">
+                        Int. este mes: {{integrador.accountsInfo.onMonth}}
+                    </div>
+                </div>
+                
+            </div>
+          </div>
+        </li>
+        <li class="integrador-itm only-when-no-body">
+          No encontramos a nadie bajo ese criterio
+        </li>
+      </ul>
+
+      <ul class="integradores-list second-list" flex="noshrink" ng-if="!deleting && lastAccept && !cancelled">
+        <li class="integrador-itm">
+          <div class="integrador-full-wrapper" layout>
+            <img ng-src="{{agentSelected.profileImg}}" class="md-avatar">
+            <div class="agent-info-wrapper" layout flex="90">
+                <div class="name-block" layout="column" flex="50">
+                    <div class="name">
+                      {{agentSelected.userName}}
+                    </div>
+                    <div class="results-color-resume" layout>
+                        <div class="not-starting-integrations bar-integrations c-blue" ng-style="{width: (agentSelected.integrations.notStarting.length / agentSelected.integrations.percentBase) + '%'}"></div>
+                        <div class="pending-integrations bar-integrations c-red" ng-style="{width: (agentSelected.integrations.pending.length / agentSelected.integrations.percentBase) + '%'}"></div>
+                        <div class="success-integrations bar-integrations c-green" ng-style="{width: (agentSelected.integrations.success.length / agentSelected.integrations.percentBase) + '%'}"></div>
+                    </div>
+                </div>
+                <div layout flex="45" flex-offset="5" class="agent-integrations-info-details">
+                   <div class="info-item" flex="25">
+                        Diarias: {{integrador.accountsInfo.daily}}
+                    </div>
+                    <div class="info-item" flex="30">
+                        Totales: {{integrador.integrations.total}}
+                    </div>
+                    <div class="info-item" flex="45">
+                        Int. este mes: {{integrador.accountsInfo.onMonth}}
+                    </div>
+                </div>
+                
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <ul class="accounts-list" ng-if="deleting || lastAccept">
+        <li ng-repeat="accounts in accountsToWork" class="account-container-itm">
+          <div class="account-wrapper" layout>
+            <div class="account-name name" flex="50">
+              {{accounts.personName}}
+            </div>
+            <div class="account-key account-details" flex="25">
+              {{accounts.account}}
+            </div>
+            <div class="account-record account-details" flex="25">
+              Folio: {{accounts.contractNumber}}
+            </div>
+          </div>
+        </li>
+      </ul>
+    </md-dialog-content>
+
+    <md-dialog-actions layout class="dialog-actions-container" layout-align="end center">
+        <button ng-if="(lastAccept || deleting) && !cancelled" class="back-control no-border-no-outline" ng-click="cancellingAction()">
+            <span ng-if="deleting && !lastAccept">
+              CANCELAR
+            </span>
+            <span ng-if="lastAccept">
+              DESHACER
+            </span>
+        </button>
+        <button ng-disabled="!agentIsSelected && !deleting" class="dialog-accepting-button no-border-no-outline" ng-click="actionForward()">
+            <span ng-if="!deleting && !lastAccept">
+              {{buttonText}}
+            </span>
+            <span ng-if="deleting && !lastAccept">
+              ELIMINAR
+            </span>
+            <span ng-if="lastAccept && !cancelled">
+              ACEPTAR
+            </span>
+            <span ng-if="cancelled">
+              CERRAR
+            </span>
+        </button>
+    </md-dialog-actions>
+
+</md-dialog>

@@ -1,0 +1,61 @@
+<div layout='column' class="integradores-control-area-container">
+
+	<div class="controllers-panel" layout="column">
+		<div class="filter-section" md-whiteframe="2" layout>
+			<div class="enterprise-selector-wrapper" flex="50">
+				<md-select ng-model="onlyShowActives" placeholder="Mostrar" class="md-no-underline">
+                    <md-option ng-value="1" ng-click="changeElementsDependingOnActivity(1)" ng-keydown="changeElementsDependingOnActivity(1)" >
+                        Integradores Activos
+                    </md-option>
+                    <md-option ng-value="0" ng-click="changeElementsDependingOnActivity(0)" ng-keydown="changeElementsDependingOnActivity(0)" >
+                        Integradores Inactivos
+                    </md-option>
+                </md-select>
+			</div>
+			<div class="search-input-wrapper" flex="50" layout>
+				<input type="text" class="no-border-no-outline" ng-disabled="!usersAvailable" ng-model="accountToSearch" flex="90" placeholder="Buscar cuenta, folio" ng-keyup="searching($event)">
+				<span class="icon-model icon-search"></span>
+			</div>
+		</div>
+	</div>
+
+	<div class="users-target-list-wrapper" layout md-whiteframe="2">
+		<ul class="users-target-list">
+			<li class="user-target-item" ng-class="{activeTarget: integrador.status == 'Activo', noActiveTarget: integrador.status != 'Activo'}" layout ng-repeat="integrador in selectedElements | orderBy: actualOrderCriteria.criteria : actualOrderCriteria.reverse">
+				<div class="integrador-full-wrapper" layout>
+					<span ng-style="{'background-image': 'url(' + (integrador.profileImg ? integrador.profileImg : folderStructureUrl + 'src/images/myAvatar.png') + ')'}" class="md-avatar image-background-model"></span>
+					<div class="agent-info-wrapper" layout flex="90">
+						<div class="name-block" layout="column" flex="35">
+							<div class="name">
+								{{integrador.userName}}
+							</div>
+							<div class="results-color-resume" layout>
+								<div class="not-starting-integrations bar-integrations c-red" ng-style="{width: (integrador.integrations.notStarting / (integrador.integrations.total / 100)) + '%'}"></div>
+		                        <div class="pending-integrations bar-integrations c-blue" ng-style="{width: (integrador.integrations.pending / (integrador.integrations.total / 100)) + '%'}"></div>
+		                        <div class="success-integrations bar-integrations c-green" ng-style="{width: (integrador.integrations.success / (integrador.integrations.total / 100)) + '%'}"></div>
+							</div>
+						</div>
+						<div layout flex="50" flex-offset="5" class="agent-integrations-info-details">
+							<div class="info-item" flex="25">
+								Asignadas: {{integrador.integrations.total}}
+							</div>
+							<div class="info-item" flex="30">
+								Pendientes: {{integrador.integrations.pending}}
+							</div>
+							<div class="info-item" flex="45">
+								Integradas: {{integrador.integrations.success}}
+							</div>
+						</div>
+						<div class="details-button-wrapper" flex="10">
+							<span class="icon-model icon-fullscreen no-border-no-outline cursor" ng-click="integradoresDialogShow($event, integrador)"></span>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="user-target-item only-when-no-body">
+				No encontramos a nadie bajo ese criterio
+			</li>
+		</ul>
+	</div>
+	
+</div>

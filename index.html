@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+  <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="css/angular-material.min.css">
+  <link rel="stylesheet" href="app.css">
+  <!--<link rel="stylesheet" href="css/main.css">-->
+  <link href="css/material-icons.css" rel="stylesheet">
+</head>
+<body ng-app="PayRollWebApp" ng-cloak>
+  <div ng-controller="PayrollWebCtrl" layout="column" ng-init="initPayrollWeb()" resize>
+
+    <payroll-navbar></payroll-navbar>
+    
+    <section layout="row" flex id="content-map">
+        <div ng-view class="view-animate"  id="view-content-payroll" ng-style="objStyleWrapperHeightContent"></div>
+    </section>
+  </div>
+
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular-route.min.js"></script>
+  <script src="js/angular-animate.min.js"></script>
+  <script src="js/angular-aria.min.js"></script>
+  <script src="js/angular-messages.min.js"></script>
+  <script src="js/underscore-min.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="js/angular-material.min.js"></script>
+
+  <script src="js/Chart.min.js"></script>
+  <script src="js/angular-chart.min.js"></script>
+  <script src="js/angular-css.min.js"></script>
+  
+ 
+  <script type="text/javascript" src="js/arrayFrom.js"></script>
+
+  <script src="app.js"></script>
+
+
+  <!-- services -->
+
+  <script src="services/accountComplementaryService.js"></script>
+  <script src="services/locationService.js"></script>
+  <script src="services/controlPanelService.js"></script>
+  <script src="services/userService.js"></script>
+  <script src="services/geographicElementsService.js"></script>
+  <script src="services/accountsService.js"></script>
+  <script src="services/enterprisesService.js"></script>
+  <script src="services/pocsService.js"></script>
+  <script src="services/integratorsService.js"></script>
+  <script src="services/subsidiariesService.js"></script>
+
+  <!-- directives -->
+
+  <script src="directives/mailValidation.dir.js"></script>
+
+  <!-- fin directives -->
+
+
+
+  <!-- MAIN APP -->
+
+
+  <script src="payrollweb/payrollweb.js"></script>
+  <script src="navbar/navbar.ctrl.js"></script>
+
+  <!-- login -->
+  <script src="login/login.ctrl.js"></script>
+  <!-- fin login  -->
+
+
+  <!-- Inicia localización dispositivos -->
+  <script src="location-pocs/location-pocs.js"></script>
+  <script src="location-pocs/sidenav-left/location-sidenav-left.js"></script>
+  <script src="location-pocs/agent-details/agent-details.js"></script>
+  <!-- Fin localización dispositivos -->
+
+  <!-- Inicia Área de Integradores -->
+  <script src="integradores/integradoresMain.ctrl.js"></script>
+  <script src="integradores/controlArea/controlArea.ctrl.js"></script>
+  <script src="integradores/sidenav/sidenav.ctrl.js"></script>
+  <!-- Fin Área de Integradores -->
+
+  <!-- Inicia Asignar y reasignar cuentas -->
+  <script src="assign-reassign/assign-reassign.js"></script>
+  <script src="assign-reassign/accounts/accounts.js"></script>
+  <script src="assign-reassign/sidenav-left/assign-sidenav-left.js"></script>
+  <!-- Fin Asignar y reasignar cuentas -->
+
+  <!-- Inicia Área de Administración -->
+  <script src="administrating/adminMain.ctrl.js"></script>
+  <script src="administrating/controlArea/controlArea.ctrl.js"></script>
+  <script src="administrating/sidenav/sidenav.ctrl.js"></script>
+  <!-- Fin Área de Administración --> 
+
+  <!-- Inicia Área de Perfil -->
+  <script src="profile/profileMain.ctrl.js"></script>
+  <script src="profile/controlArea/controlArea.ctrl.js"></script>
+  <script src="profile/sidenav/sidenav.ctrl.js"></script>
+  <!-- Fin Área de Perfil --> 
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+{   
+    "responseCode": {
+        "status": 200,
+        "descripcion": ""
+    },
+    "data": 
+        [
+            {
+                "id": 1,
+                "name": "POC #1",
+                "subdirector": {"name": "Angélica Peralta Ortiz", "id": 382397},
+                "supervisor": {"name": "Juan Luís de Alarcón", "id": 89837234},
+                "status": 1
+            },
+            {
+                "id": 2,
+                "name": "POC #2",
+                "subdirector": {"name": "Jimena Sariñana", "id": 9382112},
+                "supervisor": {"name": "Leonora Carrington", "id": 4809890123},
+                "status": 1
+            },
+            {
+                "id": 3,
+                "name": "POC #3",
+                "subdirector": {"name": "José Luís Franco", "id": 936782393},
+                "supervisor": {"name": "Pikachú y Ash Hilton", "id": 7392384},
+                "status": 0
+            },
+            {
+                "id": 4,
+                "name": "POC #4",
+                "subdirector": {"name": "Eleonora de la Cortina", "id": 73829342342},
+                "supervisor": {"name": "Francisco Federico Fidel", "id": 455232431},
+                "status": 0
+            },
+            {
+                "id": 5,
+                "name": "POC #5",
+                "subdirector": {"name": "Eleonora de la Cortina", "id": 73829342342},
+                "supervisor": {"name": "Francisco Federico Fidel", "id": 455232431},
+                "status": 1
+            }
+    ]
+}

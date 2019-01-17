@@ -1,0 +1,39 @@
+<md-dialog class="dialog-box" aria-label="admin-actions-controlls">
+
+    <md-toolbar class="dialog-header">
+      <div class="md-toolbar-tools">
+        <h2>{{action}}</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancelDialog()">
+          <svg fill="#fff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content class="dialog-container" layout="column">
+      <div class="form-wrapper" ng-include="formView" ng-if="!justClosing"></div>
+      <div class="success-message" ng-if="justClosing && actionSuccess">
+        {{targetUserName}} {{(toEdit) ? 'modificado' : 'creado'}} exitosamente
+      </div>
+    </md-dialog-content>
+
+    <md-dialog-actions layout class="dialog-actions-container" layout-align="end center">
+        <button ng-if="!justClosing" class="back-control no-border-no-outline" ng-click="cancelDialog()">
+            <span>
+              CANCELAR
+            </span>
+        </button>
+        <button ng-disabled="!validForm && !justClosing" class="dialog-accepting-button no-border-no-outline" ng-click="actionForward()">
+            <span ng-if="!justClosing">
+              {{buttonText}}
+            </span>
+            <span ng-if="justClosing">
+              CERRAR
+            </span>
+        </button>
+    </md-dialog-actions>
+
+</md-dialog>

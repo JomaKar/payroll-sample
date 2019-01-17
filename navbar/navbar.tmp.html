@@ -1,0 +1,82 @@
+<md-toolbar md-scroll-shrink id="toolbar-payroll" ng-init="menuStarted()" ng-if="!noMenu">
+  <div class="md-toolbar-tools" layout>
+    <div class="navbar-header" flex="30" layout layout-align="start center">
+      <img ng-src="{{(folderStructureUrl) ? folderStructureUrl + 'src/images/logo.png' : 'src/images/logo.png'}}" width="130px" height="24px" id="img-logo" />
+      <p class="header-text">
+        PayRoll Office Center
+      </p>
+    </div>
+    <div class="navbar-itm cursor integradores-itm" flex="10" ng-click="goTo('integradores', $event)" layout layout-align="center center">
+      Integradores
+    </div>
+    <div class="navbar-itm cursor assign-reassign-itm" flex="10" ng-click="goTo('assign-reassign', $event)" layout layout-align="center center">
+      Asignar
+    </div>
+    <!-- <div class="navbar-itm cursor" flex="15" layout layout-align="center center">
+      Administrar <i class="material-icons">arrow_drop_down</i>
+    </div> -->
+    <div class="navbar-itm cursor administrar-itm" flex="15" layout layout-align="center center">
+      <div class="dropdown-container">
+        <div class="header-box no-border-no-outline" ng-click="openMenu($event, 'admin')">
+          Administrar <span class="icon-model icon-triangle-arrow"></span>
+        </div>
+        <div class="menu-options-wrapper no-border-no-outline" ng-if="adminMenuIsOpen" ng-click="closeMenu()">
+          <ul class="menu-list" ng-class="{open: adminMenuIsOpen}" md-whiteframe="2">
+            <li class="menu-itm no-border-no-outline" ng-click="goTo('administrar/usuarios')">
+              Usuarios
+            </li>
+            <li class="menu-itm no-border-no-outline" ng-click="goTo('administrar/POCs')">
+              POCs
+            </li>
+            <!-- <li class="menu-itm no-border-no-outline" ng-click="goTo('administrar/centros-laborales')"> -->
+            <li class="menu-itm no-border-no-outline cursor-not-allowed" disabled>
+              Centros de trabajo
+            </li>
+            <li class="menu-itm no-border-no-outline" ng-click="goTo('administrar/sucursales')">
+              Sucursales
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="navbar-itm cursor location-pocs-itm" flex="10" ng-click="goTo('location-pocs', $event)" layout layout-align="center center">
+      POCs
+    </div>
+    <div class="navbar-itm perfil-itm cursor" flex="20" layout layout-align="center center">
+      <div class="dropdown-container profile-dropdown" ng-if="JSON.stringify(theUser) !== '{}'">
+        <div class="header-box no-border-no-outline" ng-click="openMenu($event, 'profile')">
+          <div class="img-wrapper">
+              <span class="image-background-model img-span" ng-style="{'background-image': 'url(' + theUser.img  +')'}"></span>
+              <span class="notifications-point" ng-style="{display: (userNewNotifications > 0 || userNewTutorials > 0) ? 'block' : 'none'}"></span>
+          </div>
+          <div class="name-container">
+              {{ theUser.name }}  
+          </div>
+          <span class="icon-model icon-menu-dots"></span>
+        </div>
+        <div class="menu-options-wrapper no-border-no-outline" ng-if="profileMenuIsOpen" ng-click="closeMenu()">
+          <ul class="menu-list" ng-class="{open: profileMenuIsOpen}" md-whiteframe="2">
+            <!-- <li class="menu-itm no-border-no-outline" ng-click="goTo('perfil/mi-perfil')"> -->
+            <li class="menu-itm no-border-no-outline cursor-not-allowed" disabled> 
+              Mi Perfil
+            </li>
+            <!-- <li class="menu-itm no-border-no-outline" ng-click="goTo('perfil/notificaciones')"> -->
+            <li class="menu-itm no-border-no-outline cursor-not-allowed" disabled>
+              Notificaciones <span class="new-of-something" ng-style="{display: (userNewNotifications > 0) ? 'block' : 'none'}"> {{userNewNotifications.length}} </span>
+            </li>
+            <!-- <li class="menu-itm no-border-no-outline" ng-click="goTo('perfil/tutoriales')"> -->
+            <li class="menu-itm no-border-no-outline cursor-not-allowed" disabled>
+              Tutoriales <span class="new-of-something" ng-style="{display: (userNewTutorials > 0) ? 'block' : 'none'}"> {{userNewTutorials.length}} </span>
+            </li>
+            <li class="menu-itm no-border-no-outline" ng-click="goTo('login')">
+              Cerrar Sesión
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="navbar-itm cursor-not-allowed" flex="5" layout layout-align="center center">
+      <span class="icon-model icon-search"></span>
+    </div>
+  </div>
+</md-toolbar>

@@ -1,0 +1,58 @@
+<form id="modelForm" layout="column" ng-init="basicSetup(templateForm)" name="templateForm" ng-blur="validateForm(templateForm)" ng-click="validateForm(templateForm)" ng-keyup="validateForm(templateForm)" class="no-border-no-outline">
+	<div class="form-inputs-row first-definition-row" layout>
+		<div class="img-wrapper">
+			<span class="icon-container">
+				<span class="icon-model icon-info-outline"></span>
+			</span>
+		</div>
+		<div class="inputs-wrapper">
+			<md-input-container class="registration-record-input small-number-input">
+				<label class="no-color-on-focus">Número</label>
+				<input name="subsidiaryId" notempty required type="number" ng-model="target.id">
+			</md-input-container>
+			<md-input-container class="registration-name-input big-name-input">
+				<label class="no-color-on-focus">Nombre</label>
+				<input name="subsidiaryName" notempty required type="text" ng-model="target.name">
+			</md-input-container>
+		</div>
+	</div>
+	<div class="form-inputs-row contact-reference-row" layout>
+		<div class="img-wrapper">
+			<span class="icon-container">
+				<span class="icon-model icon-location-on"></span>
+			</span>
+		</div>
+		<div class="inputs-wrapper">
+			<md-input-container class="small-number-input">
+				<label class="no-color-on-focus">Código Postal</label>
+				<input name="subsidiaryZipCode" notempty required type="number" ng-model="target.zipCode">
+			</md-input-container>
+
+			<md-input-container class="big-name-input">
+				<label class="no-color-on-focus">POC</label>
+				<md-select name="pocName" required ng-model="target.poc.name" ng-change="validateForm(templateForm)">
+					<md-option ng-repeat="poc in usefullPocs" ng-value="poc.name" ng-click="contactReferenceChange(poc.id)" ng-keydown="contactReferenceChange(poc.id)">
+						{{poc.name}}
+					</md-option>
+				</md-select>
+			</md-input-container>
+		</div>
+	</div>
+	<div class="form-inputs-row status-row" layout>
+		<div class="img-wrapper">
+			<span class="icon-container">
+				<span class="icon-model icon-power-on"></span>
+			</span>
+		</div>
+		<div class="inputs-wrapper">
+			<md-input-container class="status-select-container">
+				<label class="no-color-on-focus">Estatus</label>
+				<md-select name="status" required ng-model="target.status" ng-change="validateForm(templateForm)">
+					<md-option ng-value="status.val" ng-repeat="status in statusOptions">
+						{{status.name}}
+					</md-option>
+				</md-select>
+			</md-input-container>
+		</div>
+	</div>
+</form>

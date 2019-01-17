@@ -1,0 +1,285 @@
+.spaced-container {
+  padding: 48px 0 100px;
+  box-sizing: border-box;
+  max-height: 100%; }
+  .spaced-container .assign-title {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.0;
+    letter-spacing: -0.2px;
+    color: #333;
+    margin-bottom: 36px; }
+  .spaced-container .assign-view-content {
+    max-width: 80%; }
+    .spaced-container .assign-view-content assign-left-side .contentLeftLocation md-sidenav {
+      width: 100%;
+      background-color: transparent; }
+      .spaced-container .assign-view-content assign-left-side .contentLeftLocation md-sidenav #wrapper-info-poc .assign-pocs-select-wrapper {
+        height: 60px;
+        background-color: #385a9e; }
+        .spaced-container .assign-view-content assign-left-side .contentLeftLocation md-sidenav #wrapper-info-poc .assign-pocs-select-wrapper md-select {
+          background-color: transparent;
+          margin: 16px 0 16px !important; }
+          .spaced-container .assign-view-content assign-left-side .contentLeftLocation md-sidenav #wrapper-info-poc .assign-pocs-select-wrapper md-select .md-select-value {
+            padding: 0 20px !important;
+            background-color: #385a9e;
+            font-size: 16px;
+            color: white; }
+      .spaced-container .assign-view-content assign-left-side .contentLeftLocation md-sidenav #wrapper-info-poc .poc-accounts-resume {
+        height: calc(70% - 148px);
+        padding-top: 32px; }
+        .spaced-container .assign-view-content assign-left-side .contentLeftLocation md-sidenav #wrapper-info-poc .poc-accounts-resume .accounts-to-see-control-title {
+          font-size: 14px;
+          line-height: 1.43;
+          letter-spacing: -0.2px;
+          margin: 0;
+          margin-bottom: 26px; }
+        .spaced-container .assign-view-content assign-left-side .contentLeftLocation md-sidenav #wrapper-info-poc .poc-accounts-resume md-radio-group md-radio-button {
+          margin-bottom: 24px;
+          font-size: 16px;
+          line-height: 1.5; }
+    .spaced-container .assign-view-content assign-controll-area {
+      padding-left: 20px;
+      box-sizing: border-box; }
+      .spaced-container .assign-view-content assign-controll-area .accounts-control-area-container .controllers-panel {
+        background-color: white;
+        min-height: 123px; }
+        .spaced-container .assign-view-content assign-controll-area .accounts-control-area-container .controllers-panel .filter-top-section {
+          border-bottom: 1px solid #e0e0e0;
+          box-sizing: border-box;
+          min-height: 60px; }
+          .spaced-container .assign-view-content assign-controll-area .accounts-control-area-container .controllers-panel .filter-top-section .enterprise-selector-wrapper {
+            border-right: 1px solid #e0e0e0;
+            box-sizing: border-box;
+            height: 60px; }
+            .spaced-container .assign-view-content assign-controll-area .accounts-control-area-container .controllers-panel .filter-top-section .enterprise-selector-wrapper md-select {
+              margin: 16px 0 16px !important; }
+              .spaced-container .assign-view-content assign-controll-area .accounts-control-area-container .controllers-panel .filter-top-section .enterprise-selector-wrapper md-select .md-select-value {
+                padding: 0 20px !important;
+                font-size: 16px; }
+          .spaced-container .assign-view-content assign-controll-area .accounts-control-area-container .controllers-panel .filter-top-section .search-input-wrapper {
+            height: 59px;
+            padding-bottom: 1px; }
+            .spaced-container .assign-view-content assign-controll-area .accounts-control-area-container .controllers-panel .filter-top-section .search-input-wrapper input {
+              padding-left: 24px;
+              font-size: 16px;
+              line-height: 1.0;
+              letter-spacing: -0.2px; }
+            .spaced-container .assign-view-content assign-controll-area .accounts-control-area-container .controllers-panel .filter-top-section .search-input-wrapper span {
+              margin-top: 19px;
+              height: 24px;
+              width: 24px; }
+        .spaced-container .assign-view-content assign-controll-area .accounts-control-area-container .controllers-panel .active-controllers-bottom-section {
+          padding: 12px 24px;
+          min-height: 63px; }
+          .spaced-container .assign-view-content assign-controll-area .accounts-control-area-container .controllers-panel .active-controllers-bottom-section md-checkbox {
+            margin: 0; }
+            .spaced-container .assign-view-content assign-controll-area .accounts-control-area-container .controllers-panel .active-controllers-bottom-section md-checkbox .md-label {
+              margin-top: 12px;
+              font-size: 16px;
+              color: #4a90e2;
+              font-weight: 500;
+              line-height: 0.88; }
+            .spaced-container .assign-view-content assign-controll-area .accounts-control-area-container .controllers-panel .active-controllers-bottom-section md-checkbox:not(.md-checked) .md-icon {
+              border-color: #4a90e2;
+              background-color: transparent; }
+            .spaced-container .assign-view-content assign-controll-area .accounts-control-area-container .controllers-panel .active-controllers-bottom-section md-checkbox .md-icon {
+              background-color: #4a90e2; }
+              .spaced-container .assign-view-content assign-controll-area .accounts-control-area-container .controllers-panel .active-controllers-bottom-section md-checkbox .md-icon:after {
+                border-color: white; }
+          .spaced-container .assign-view-content assign-controll-area .accounts-control-area-container .controllers-panel .active-controllers-bottom-section .kill-assign-controllers-container .garbage-button {
+            width: 24px;
+            height: 24px;
+            margin-right: 24px;
+            margin-top: 6px;
+            overflow: visible;
+            background-color: transparent; }
+            .spaced-container .assign-view-content assign-controll-area .accounts-control-area-container .controllers-panel .active-controllers-bottom-section .kill-assign-controllers-container .garbage-button:disabled {
+              opacity: .3;
+              background-color: transparent;
+              cursor: not-allowed; }
+            .spaced-container .assign-view-content assign-controll-area .accounts-control-area-container .controllers-panel .active-controllers-bottom-section .kill-assign-controllers-container .garbage-button span {
+              width: 24px;
+              height: 24px; }
+          .spaced-container .assign-view-content assign-controll-area .accounts-control-area-container .controllers-panel .active-controllers-bottom-section .kill-assign-controllers-container .assign-button {
+            width: 132px;
+            height: 36px;
+            background-color: #d30011;
+            color: white; }
+            .spaced-container .assign-view-content assign-controll-area .accounts-control-area-container .controllers-panel .active-controllers-bottom-section .kill-assign-controllers-container .assign-button:disabled {
+              background-color: #d7d8d6;
+              cursor: not-allowed; }
+      .spaced-container .assign-view-content assign-controll-area .accounts-control-area-container .accounts-list-wrapper {
+        overflow-y: scroll;
+        margin-top: 10px;
+        background-color: white;
+        height: calc(70% - 152px); }
+        .spaced-container .assign-view-content assign-controll-area .accounts-control-area-container .accounts-list-wrapper .accounts-list {
+          padding: 0;
+          width: 100%;
+          margin: 0; }
+          .spaced-container .assign-view-content assign-controll-area .accounts-control-area-container .accounts-list-wrapper .accounts-list .account-item {
+            height: 40px;
+            padding: 8px 0;
+            border-bottom: 1px solid #e0e0e0;
+            box-sizing: border-box; }
+            .spaced-container .assign-view-content assign-controll-area .accounts-control-area-container .accounts-list-wrapper .accounts-list .account-item.selectedItm {
+              background-color: #eef6fd; }
+            .spaced-container .assign-view-content assign-controll-area .accounts-control-area-container .accounts-list-wrapper .accounts-list .account-item md-checkbox {
+              margin: 0 24px; }
+              .spaced-container .assign-view-content assign-controll-area .accounts-control-area-container .accounts-list-wrapper .accounts-list .account-item md-checkbox .md-icon {
+                background-color: #4a6176; }
+                .spaced-container .assign-view-content assign-controll-area .accounts-control-area-container .accounts-list-wrapper .accounts-list .account-item md-checkbox .md-icon:after {
+                  border-color: white; }
+              .spaced-container .assign-view-content assign-controll-area .accounts-control-area-container .accounts-list-wrapper .accounts-list .account-item md-checkbox:not(.md-checked) .md-icon {
+                background-color: transparent; }
+              .spaced-container .assign-view-content assign-controll-area .accounts-control-area-container .accounts-list-wrapper .accounts-list .account-item md-checkbox .md-label {
+                width: 100%;
+                display: flex; }
+                .spaced-container .assign-view-content assign-controll-area .accounts-control-area-container .accounts-list-wrapper .accounts-list .account-item md-checkbox .md-label .account-name {
+                  font-size: 16px;
+                  font-weight: 500;
+                  line-height: 1.5;
+                  letter-spacing: -0.2px;
+                  text-align: left;
+                  color: rgba(51, 51, 51, 0.87); }
+                .spaced-container .assign-view-content assign-controll-area .accounts-control-area-container .accounts-list-wrapper .accounts-list .account-item md-checkbox .md-label .account-details-itm {
+                  font-size: 12px;
+                  line-height: 1.33;
+                  letter-spacing: -0.2px;
+                  text-align: left;
+                  color: rgba(0, 0, 0, 0.54); }
+          .spaced-container .assign-view-content assign-controll-area .accounts-control-area-container .accounts-list-wrapper .accounts-list .only-when-no-body {
+            display: none;
+            padding-left: 24px; }
+          .spaced-container .assign-view-content assign-controll-area .accounts-control-area-container .accounts-list-wrapper .accounts-list.empty-list .only-when-no-body {
+            display: block; }
+
+.dialog-box {
+  width: 604px; }
+  .dialog-box .dialog-container .inputWrapper {
+    height: 60px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 1px; }
+    .dialog-box .dialog-container .inputWrapper input {
+      padding-left: 24px;
+      font-size: 16px;
+      line-height: 1.0;
+      letter-spacing: -0.2px; }
+    .dialog-box .dialog-container .inputWrapper span {
+      margin-top: 19px;
+      width: 24px;
+      height: 24px; }
+  .dialog-box .dialog-container .status-texts {
+    height: 96px;
+    padding: 44px 36px 28px;
+    box-sizing: border-box; }
+    .dialog-box .dialog-container .status-texts span {
+      font-size: 16px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.5;
+      letter-spacing: normal;
+      text-align: left;
+      color: rgba(51, 51, 51, 0.87);
+      display: block; }
+  .dialog-box .dialog-container .integradores-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 100%; }
+    .dialog-box .dialog-container .integradores-list.second-list {
+      margin-bottom: 20px; }
+      .dialog-box .dialog-container .integradores-list.second-list .integrador-itm .integrador-full-wrapper {
+        border: none; }
+    .dialog-box .dialog-container .integradores-list .integrador-itm {
+      height: 72px;
+      box-sizing: border-box;
+      padding: 11px 24px 0;
+      cursor: pointer; }
+      .dialog-box .dialog-container .integradores-list .integrador-itm.selected {
+        background-color: #eef6fd; }
+      .dialog-box .dialog-container .integradores-list .integrador-itm .integrador-full-wrapper {
+        box-sizing: border-box;
+        border-bottom: 1px solid #e0e0e0;
+        width: 100%;
+        display: flex;
+        padding-bottom: 19px; }
+        .dialog-box .dialog-container .integradores-list .integrador-itm .integrador-full-wrapper .md-avatar {
+          height: 36px;
+          width: 36px;
+          border-radius: 50%; }
+        .dialog-box .dialog-container .integradores-list .integrador-itm .integrador-full-wrapper .agent-info-wrapper {
+          margin-left: 20px; }
+          .dialog-box .dialog-container .integradores-list .integrador-itm .integrador-full-wrapper .agent-info-wrapper .name-block .results-color-resume {
+            width: 100%;
+            border-radius: 3px;
+            margin-top: 8px;
+            height: 6px;
+            overflow: hidden; }
+            .dialog-box .dialog-container .integradores-list .integrador-itm .integrador-full-wrapper .agent-info-wrapper .name-block .results-color-resume .bar-integrations {
+              margin-top: 0;
+              border-radius: 0; }
+          .dialog-box .dialog-container .integradores-list .integrador-itm .integrador-full-wrapper .agent-info-wrapper .name-block .name {
+            max-width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; }
+          .dialog-box .dialog-container .integradores-list .integrador-itm .integrador-full-wrapper .agent-info-wrapper .agent-integrations-info-details {
+            margin-top: 26px; }
+            .dialog-box .dialog-container .integradores-list .integrador-itm .integrador-full-wrapper .agent-info-wrapper .agent-integrations-info-details .info-item {
+              font-size: 11px;
+              font-weight: normal;
+              font-style: normal;
+              font-stretch: normal;
+              line-height: 1.33;
+              letter-spacing: -0.2px;
+              text-align: left; }
+    .dialog-box .dialog-container .integradores-list .only-when-no-body {
+      display: none; }
+    .dialog-box .dialog-container .integradores-list.empty-list .only-when-no-body {
+      display: block; }
+  .dialog-box .dialog-container .accounts-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 100%; }
+    .dialog-box .dialog-container .accounts-list .account-container-itm {
+      height: 40px;
+      box-sizing: border-box;
+      padding: 7px 24px 0; }
+      .dialog-box .dialog-container .accounts-list .account-container-itm .account-wrapper {
+        box-sizing: border-box;
+        border-bottom: 1px solid #e0e0e0;
+        width: 100%;
+        padding-bottom: 9px; }
+        .dialog-box .dialog-container .accounts-list .account-container-itm .account-wrapper .account-details {
+          font-size: 12px;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.33;
+          letter-spacing: -0.2px;
+          text-align: left;
+          color: rgba(0, 0, 0, 0.54);
+          margin-top: 6.5px; }
+  .dialog-box .dialog-actions-container {
+    height: 92px; }
+    .dialog-box .dialog-actions-container button {
+      height: 36px;
+      width: 176px;
+      color: white;
+      padding: 10px 0; }
+      .dialog-box .dialog-actions-container button span {
+        font-size: 14px;
+        font-weight: 500;
+        width: 100%;
+        text-align: center;
+        display: block; }
+      .dialog-box .dialog-actions-container button.back-control {
+        margin-right: 20px;
+        background-color: #4a6176; }
+
+/*# sourceMappingURL=assign-reassign.css.map */

@@ -1,0 +1,425 @@
+.spaced-container {
+  padding: 48px 0 100px;
+  box-sizing: border-box;
+  max-height: 100%; }
+  .spaced-container .header-title {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.0;
+    letter-spacing: -0.2px;
+    color: #333;
+    margin-bottom: 36px; }
+  .spaced-container .integradores-view-content {
+    max-width: 80%; }
+    .spaced-container .integradores-view-content integradores-left-side .contentLeftLocation md-sidenav {
+      width: 100%;
+      background-color: transparent; }
+      .spaced-container .integradores-view-content integradores-left-side .contentLeftLocation md-sidenav #wrapper-info-poc .integradores-pocs-select-wrapper {
+        height: 60px;
+        background-color: #385a9e; }
+        .spaced-container .integradores-view-content integradores-left-side .contentLeftLocation md-sidenav #wrapper-info-poc .integradores-pocs-select-wrapper md-select {
+          background-color: transparent;
+          margin: 16px 0 16px !important; }
+          .spaced-container .integradores-view-content integradores-left-side .contentLeftLocation md-sidenav #wrapper-info-poc .integradores-pocs-select-wrapper md-select .md-select-value {
+            padding: 0 20px !important;
+            background-color: #385a9e;
+            font-size: 16px;
+            color: white; }
+      .spaced-container .integradores-view-content integradores-left-side .contentLeftLocation md-sidenav #wrapper-info-poc .poc-members-wrapper {
+        height: calc(70% - 148px);
+        min-height: fit-content;
+        padding-top: 32px; }
+        .spaced-container .integradores-view-content integradores-left-side .contentLeftLocation md-sidenav #wrapper-info-poc .poc-members-wrapper .target-users-to-see-control-title {
+          font-size: 14px;
+          line-height: 1.43;
+          letter-spacing: -0.2px;
+          margin: 0;
+          margin-bottom: 26px; }
+        .spaced-container .integradores-view-content integradores-left-side .contentLeftLocation md-sidenav #wrapper-info-poc .poc-members-wrapper md-radio-group md-radio-button {
+          margin-bottom: 24px;
+          font-size: 16px;
+          line-height: 1.5; }
+    .spaced-container .integradores-view-content integradores-controll-area {
+      margin-left: 20px;
+      box-sizing: border-box;
+      height: 67.5vh; }
+      .spaced-container .integradores-view-content integradores-controll-area .integradores-control-area-container .controllers-panel {
+        background-color: transparent;
+        min-height: 60px; }
+        .spaced-container .integradores-view-content integradores-controll-area .integradores-control-area-container .controllers-panel .filter-section {
+          border-bottom: 1px solid #e0e0e0;
+          box-sizing: border-box;
+          height: 60px;
+          background-color: white; }
+          .spaced-container .integradores-view-content integradores-controll-area .integradores-control-area-container .controllers-panel .filter-section .enterprise-selector-wrapper {
+            border-right: 1px solid #e0e0e0;
+            box-sizing: border-box;
+            height: 60px; }
+            .spaced-container .integradores-view-content integradores-controll-area .integradores-control-area-container .controllers-panel .filter-section .enterprise-selector-wrapper md-select {
+              margin: 16px 0 16px !important; }
+              .spaced-container .integradores-view-content integradores-controll-area .integradores-control-area-container .controllers-panel .filter-section .enterprise-selector-wrapper md-select .md-select-value {
+                padding: 0 20px !important;
+                font-size: 16px; }
+          .spaced-container .integradores-view-content integradores-controll-area .integradores-control-area-container .controllers-panel .filter-section .search-input-wrapper {
+            height: 60px; }
+            .spaced-container .integradores-view-content integradores-controll-area .integradores-control-area-container .controllers-panel .filter-section .search-input-wrapper input {
+              padding-left: 24px;
+              font-size: 16px;
+              line-height: 1.0;
+              letter-spacing: -0.2px;
+              background-color: white; }
+            .spaced-container .integradores-view-content integradores-controll-area .integradores-control-area-container .controllers-panel .filter-section .search-input-wrapper span {
+              margin-top: 21px;
+              opacity: .7;
+              height: 21px;
+              width: 24px; }
+      .spaced-container .integradores-view-content integradores-controll-area .integradores-control-area-container .users-target-list-wrapper {
+        overflow-y: scroll;
+        margin-top: 10px;
+        background-color: white;
+        height: 100%; }
+        .spaced-container .integradores-view-content integradores-controll-area .integradores-control-area-container .users-target-list-wrapper .users-target-list {
+          padding: 0;
+          width: 100%;
+          margin: 0; }
+          .spaced-container .integradores-view-content integradores-controll-area .integradores-control-area-container .users-target-list-wrapper .users-target-list .user-target-item {
+            height: 72px;
+            box-sizing: border-box;
+            padding: 11px 24px 0; }
+            .spaced-container .integradores-view-content integradores-controll-area .integradores-control-area-container .users-target-list-wrapper .users-target-list .user-target-item .integrador-full-wrapper {
+              box-sizing: border-box;
+              border-bottom: 1px solid #e0e0e0;
+              width: 100%;
+              display: flex;
+              padding-bottom: 19px; }
+              .spaced-container .integradores-view-content integradores-controll-area .integradores-control-area-container .users-target-list-wrapper .users-target-list .user-target-item .integrador-full-wrapper .md-avatar {
+                height: 36px;
+                width: 36px;
+                border-radius: 50%; }
+              .spaced-container .integradores-view-content integradores-controll-area .integradores-control-area-container .users-target-list-wrapper .users-target-list .user-target-item .integrador-full-wrapper .agent-info-wrapper {
+                margin-left: 20px; }
+                .spaced-container .integradores-view-content integradores-controll-area .integradores-control-area-container .users-target-list-wrapper .users-target-list .user-target-item .integrador-full-wrapper .agent-info-wrapper .name-block .name {
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis; }
+                .spaced-container .integradores-view-content integradores-controll-area .integradores-control-area-container .users-target-list-wrapper .users-target-list .user-target-item .integrador-full-wrapper .agent-info-wrapper .name-block .results-color-resume {
+                  width: 100%;
+                  border-radius: 3px;
+                  margin-top: 8px;
+                  min-height: 6px;
+                  overflow: hidden; }
+                  .spaced-container .integradores-view-content integradores-controll-area .integradores-control-area-container .users-target-list-wrapper .users-target-list .user-target-item .integrador-full-wrapper .agent-info-wrapper .name-block .results-color-resume .bar-integrations {
+                    margin-top: 0;
+                    border-radius: 0; }
+                .spaced-container .integradores-view-content integradores-controll-area .integradores-control-area-container .users-target-list-wrapper .users-target-list .user-target-item .integrador-full-wrapper .agent-info-wrapper .agent-integrations-info-details {
+                  margin-top: 26px; }
+                  .spaced-container .integradores-view-content integradores-controll-area .integradores-control-area-container .users-target-list-wrapper .users-target-list .user-target-item .integrador-full-wrapper .agent-info-wrapper .agent-integrations-info-details .info-item {
+                    font-size: 11px;
+                    font-weight: normal;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1.33;
+                    letter-spacing: -0.2px;
+                    text-align: left; }
+                .spaced-container .integradores-view-content integradores-controll-area .integradores-control-area-container .users-target-list-wrapper .users-target-list .user-target-item .integrador-full-wrapper .agent-info-wrapper .details-button-wrapper {
+                  text-align: center;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  margin-top: 5px; }
+                  .spaced-container .integradores-view-content integradores-controll-area .integradores-control-area-container .users-target-list-wrapper .users-target-list .user-target-item .integrador-full-wrapper .agent-info-wrapper .details-button-wrapper span {
+                    width: 25px; }
+          .spaced-container .integradores-view-content integradores-controll-area .integradores-control-area-container .users-target-list-wrapper .users-target-list .only-when-no-body {
+            display: none; }
+          .spaced-container .integradores-view-content integradores-controll-area .integradores-control-area-container .users-target-list-wrapper .users-target-list.empty-list .only-when-no-body {
+            display: block; }
+
+.dialog-box {
+  border-radius: 0;
+  max-width: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; }
+  .dialog-box md-toolbar {
+    padding: 18px 24px 18px 60px;
+    height: 96px;
+    box-sizing: border-box; }
+    .dialog-box md-toolbar .md-toolbar-tools {
+      padding: 0;
+      display: flex;
+      justify-content: space-between; }
+      .dialog-box md-toolbar .md-toolbar-tools .integrador-data-resume {
+        max-height: 100%;
+        display: flex; }
+        .dialog-box md-toolbar .md-toolbar-tools .integrador-data-resume .integrador-img {
+          width: 60px;
+          height: 60px;
+          margin-right: 16px; }
+        .dialog-box md-toolbar .md-toolbar-tools .integrador-data-resume .integrador-info h2 {
+          height: 24px;
+          font-size: 24px; }
+        .dialog-box md-toolbar .md-toolbar-tools .integrador-data-resume .integrador-info p {
+          font-size: 14px; }
+  .dialog-box md-dialog-content {
+    padding: 0 53px 0 42px; }
+    .dialog-box md-dialog-content .integradores-section {
+      height: 300px; }
+      .dialog-box md-dialog-content .integradores-section.poc-section {
+        border-right: 1px solid rgba(0, 0, 0, 0.12); }
+        .dialog-box md-dialog-content .integradores-section.poc-section .info-block {
+          padding: 36px;
+          height: 240px;
+          box-sizing: border-box; }
+          .dialog-box md-dialog-content .integradores-section.poc-section .info-block .poc-easy-data {
+            color: #333; }
+            .dialog-box md-dialog-content .integradores-section.poc-section .info-block .poc-easy-data .poc-name {
+              font-size: 18px;
+              font-weight: 500;
+              line-height: 1.33;
+              letter-spacing: -0.1px;
+              text-align: left;
+              margin: 0; }
+            .dialog-box md-dialog-content .integradores-section.poc-section .info-block .poc-easy-data .poc-address {
+              font-size: 14px;
+              line-height: 1.43;
+              letter-spacing: -0.2px;
+              text-align: left;
+              margin: 2px 0 0;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+          .dialog-box md-dialog-content .integradores-section.poc-section .info-block .agent-contact-data {
+            list-style-type: none;
+            color: #4a90e2;
+            padding: 0;
+            margin-top: 31px; }
+            .dialog-box md-dialog-content .integradores-section.poc-section .info-block .agent-contact-data .contact-itm {
+              margin-bottom: 8px;
+              height: 24px; }
+              .dialog-box md-dialog-content .integradores-section.poc-section .info-block .agent-contact-data .contact-itm .contact-icon {
+                height: 24px;
+                width: 24px;
+                font-size: 16px;
+                display: block;
+                text-align: center;
+                margin-right: 12px;
+                float: left; }
+              .dialog-box md-dialog-content .integradores-section.poc-section .info-block .agent-contact-data .contact-itm svg {
+                padding-top: 5px; }
+        .dialog-box md-dialog-content .integradores-section.poc-section .message-sending {
+          box-shadow: 0 -1px 0 0 #e0e0e0;
+          width: calc(100% - 1px);
+          margin-right: 1px;
+          height: 60px;
+          padding: 22px 24px 18px 36px;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 0.88;
+          text-align: left;
+          color: #4a90e2;
+          border: none;
+          background-color: white; }
+          .dialog-box md-dialog-content .integradores-section.poc-section .message-sending .message-icon {
+            width: 24px;
+            position: relative;
+            top: -2px;
+            opacity: .8; }
+      .dialog-box md-dialog-content .integradores-section.efficiency-section {
+        border-right: 1px solid rgba(0, 0, 0, 0.12);
+        box-sizing: border-box; }
+        .dialog-box md-dialog-content .integradores-section.efficiency-section .month-selector-wrapper {
+          max-height: 60px;
+          height: 60px;
+          box-shadow: 0 1px 0 0 #e0e0e0; }
+          .dialog-box md-dialog-content .integradores-section.efficiency-section .month-selector-wrapper .select-text-leyend {
+            text-align: center;
+            height: 100%;
+            padding-top: 22px;
+            border-right: 1px solid #e0e0e0;
+            font-size: 16px;
+            line-height: 1.0;
+            letter-spacing: -0.2px;
+            color: #333;
+            box-sizing: border-box; }
+          .dialog-box md-dialog-content .integradores-section.efficiency-section .month-selector-wrapper .select-container {
+            height: 100%;
+            font-size: 16px;
+            color: #333; }
+            .dialog-box md-dialog-content .integradores-section.efficiency-section .month-selector-wrapper .select-container .md-select {
+              margin: 0;
+              height: 100%;
+              padding: 0 12px 0 23px; }
+              .dialog-box md-dialog-content .integradores-section.efficiency-section .month-selector-wrapper .select-container .md-select:focus {
+                border: none; }
+                .dialog-box md-dialog-content .integradores-section.efficiency-section .month-selector-wrapper .select-container .md-select:focus .md-select-value {
+                  border: none; }
+              .dialog-box md-dialog-content .integradores-section.efficiency-section .month-selector-wrapper .select-container .md-select .md-select-value {
+                color: #333;
+                border: none; }
+        .dialog-box md-dialog-content .integradores-section.efficiency-section .working-results-stats {
+          padding: 23px 36px; }
+          .dialog-box md-dialog-content .integradores-section.efficiency-section .working-results-stats .total-integrations-title {
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 1.4;
+            text-align: left;
+            color: rgba(51, 51, 51, 0.87);
+            margin: 0; }
+          .dialog-box md-dialog-content .integradores-section.efficiency-section .working-results-stats .stats {
+            margin-top: 24px; }
+            .dialog-box md-dialog-content .integradores-section.efficiency-section .working-results-stats .stats .stats-canvas-wrapper {
+              height: 128px; }
+              .dialog-box md-dialog-content .integradores-section.efficiency-section .working-results-stats .stats .stats-canvas-wrapper canvas {
+                width: auto !important;
+                height: 100% !important;
+                position: relative;
+                left: -50%; }
+            .dialog-box md-dialog-content .integradores-section.efficiency-section .working-results-stats .stats .stats-guide-wrapper .stats-meaning-list {
+              list-style-type: none;
+              padding: 0; }
+              .dialog-box md-dialog-content .integradores-section.efficiency-section .working-results-stats .stats .stats-guide-wrapper .stats-meaning-list .stat-itm {
+                min-height: 18px;
+                padding: 1px;
+                margin-bottom: 18px;
+                display: inline-flex; }
+                .dialog-box md-dialog-content .integradores-section.efficiency-section .working-results-stats .stats .stats-guide-wrapper .stats-meaning-list .stat-itm .result-color {
+                  display: block;
+                  float: left;
+                  width: 16px;
+                  height: 16px;
+                  border-radius: 50%;
+                  margin-right: 17px; }
+                  .dialog-box md-dialog-content .integradores-section.efficiency-section .working-results-stats .stats .stats-guide-wrapper .stats-meaning-list .stat-itm .result-color.success {
+                    background-color: #56d27e; }
+                  .dialog-box md-dialog-content .integradores-section.efficiency-section .working-results-stats .stats .stats-guide-wrapper .stats-meaning-list .stat-itm .result-color.not-starting {
+                    background-color: #dd1f26; }
+                  .dialog-box md-dialog-content .integradores-section.efficiency-section .working-results-stats .stats .stats-guide-wrapper .stats-meaning-list .stat-itm .result-color.pending {
+                    background-color: #47aafd; }
+                .dialog-box md-dialog-content .integradores-section.efficiency-section .working-results-stats .stats .stats-guide-wrapper .stats-meaning-list .stat-itm .result-text {
+                  font-size: 16px;
+                  line-height: 1.0;
+                  letter-spacing: -0.2px;
+                  text-align: left;
+                  color: #333; }
+      .dialog-box md-dialog-content .integradores-section.enterprise-integrations-section .select-wrapper {
+        width: 100%;
+        height: 60px;
+        font-size: 16px;
+        color: #333;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+        box-sizing: border-box; }
+        .dialog-box md-dialog-content .integradores-section.enterprise-integrations-section .select-wrapper md-select {
+          margin: 0;
+          height: 100%;
+          padding: 0 12px 0 23px; }
+          .dialog-box md-dialog-content .integradores-section.enterprise-integrations-section .select-wrapper md-select:focus {
+            border: none; }
+            .dialog-box md-dialog-content .integradores-section.enterprise-integrations-section .select-wrapper md-select:focus .md-select-value {
+              border: none; }
+          .dialog-box md-dialog-content .integradores-section.enterprise-integrations-section .select-wrapper md-select .md-select-value {
+            color: #333;
+            border: none; }
+      .dialog-box md-dialog-content .integradores-section.enterprise-integrations-section .list-wrapper {
+        width: 100%;
+        height: 240px;
+        overflow-y: scroll; }
+        .dialog-box md-dialog-content .integradores-section.enterprise-integrations-section .list-wrapper .integrations-per-enterprise-list {
+          padding: 0;
+          margin: 0;
+          list-style-type: none; }
+          .dialog-box md-dialog-content .integradores-section.enterprise-integrations-section .list-wrapper .integrations-per-enterprise-list .integration-itm {
+            width: 100%;
+            height: 72px;
+            padding: 18px 6px 16px 36px;
+            box-sizing: border-box;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
+            .dialog-box md-dialog-content .integradores-section.enterprise-integrations-section .list-wrapper .integrations-per-enterprise-list .integration-itm.blue-label {
+              box-shadow: 6px 0 0 0 #4a90e2 inset; }
+            .dialog-box md-dialog-content .integradores-section.enterprise-integrations-section .list-wrapper .integrations-per-enterprise-list .integration-itm.green-label {
+              box-shadow: 6px 0 0 0 #56d27e inset; }
+            .dialog-box md-dialog-content .integradores-section.enterprise-integrations-section .list-wrapper .integrations-per-enterprise-list .integration-itm.red-label {
+              box-shadow: 6px 0 0 0 #dd1f26 inset; }
+            .dialog-box md-dialog-content .integradores-section.enterprise-integrations-section .list-wrapper .integrations-per-enterprise-list .integration-itm .employee-name {
+              margin: 0;
+              width: 100%;
+              font-size: 16px;
+              color: #333; }
+            .dialog-box md-dialog-content .integradores-section.enterprise-integrations-section .list-wrapper .integrations-per-enterprise-list .integration-itm .identifiers-data-wrapper {
+              width: 100%;
+              display: flex;
+              margin-top: 6px;
+              justify-content: space-between; }
+              .dialog-box md-dialog-content .integradores-section.enterprise-integrations-section .list-wrapper .integrations-per-enterprise-list .integration-itm .identifiers-data-wrapper .itm-span {
+                display: block;
+                font-size: 12px;
+                line-height: 1.33;
+                letter-spacing: -0.2px;
+                text-align: left;
+                color: #4d4d4d;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis; }
+                .dialog-box md-dialog-content .integradores-section.enterprise-integrations-section .list-wrapper .integrations-per-enterprise-list .integration-itm .identifiers-data-wrapper .itm-span .timer-span {
+                  width: 15px;
+                  height: 15px;
+                  opacity: .5;
+                  display: inline-block;
+                  float: left;
+                  margin-right: 5px; }
+
+.message-full-width-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(238, 246, 253, 0.7) !important;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+  .message-full-width-wrapper .message-dialog-box {
+    width: 516px;
+    margin: 0 auto;
+    background-color: white; }
+    .message-full-width-wrapper .message-dialog-box .dialog-header {
+      background-color: #385a9e !important;
+      height: 63px;
+      width: 100%;
+      color: white; }
+    .message-full-width-wrapper .message-dialog-box .dialog-container .input-wrapper {
+      height: 60px;
+      box-sizing: border-box;
+      border-bottom: 1px solid #e0e0e0; }
+      .message-full-width-wrapper .message-dialog-box .dialog-container .input-wrapper input {
+        padding-left: 24px;
+        font-size: 16px;
+        line-height: 1.0;
+        letter-spacing: -0.2px;
+        background-color: transparent; }
+    .message-full-width-wrapper .message-dialog-box .dialog-container .text-area-wrapper {
+      height: 240px;
+      box-sizing: border-box;
+      border-bottom: 1px solid #e0e0e0; }
+      .message-full-width-wrapper .message-dialog-box .dialog-container .text-area-wrapper textarea {
+        padding-left: 24px;
+        padding-top: 22px;
+        font-size: 16px;
+        line-height: 1.0;
+        letter-spacing: -0.2px;
+        height: 100%;
+        max-height: 100%;
+        background-color: transparent; }
+    .message-full-width-wrapper .message-dialog-box .dialog-actions-container {
+      height: 96px;
+      padding: 24px;
+      padding-bottom: 36px;
+      box-sizing: border-box; }
+      .message-full-width-wrapper .message-dialog-box .dialog-actions-container button {
+        height: 36px;
+        width: 468px;
+        color: white;
+        padding: 10px 0; }
+
+/*# sourceMappingURL=integradores.css.map */

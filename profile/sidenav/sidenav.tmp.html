@@ -1,0 +1,38 @@
+<div class="contentLeftLocation">
+    <md-sidenav class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+
+
+        <div class="new-button-wrapper" ng-if="canEdit && onTutos"  md-whiteframe="2" layout="row" >
+            Videos
+            <button ng-click="createVideo()" class="dialog-accepting-button no-border-no-outline">NUEVO VIDEO</button>
+        </div>
+        
+        <div md-whiteframe="2" class="down-area-sidenav" layout="column">
+
+            <div class="padding-wrapper order-options-wrapper" layout="column">
+                <p class="control-title" ng-if="onTutos">
+                    Ordenar videos tutoriales por:
+                </p>
+
+                <md-radio-group ng-model="visibleVideos.orderSelected" ng-if="onTutos">
+
+                    <md-radio-button value="newest" class="md-primary no-border-no-outline" ng-click="orderingVideos('newest')" ng-keyup="orderingVideos('newest')">
+                        Más recientes
+                    </md-radio-button>
+                    <md-radio-button value="oldest" class="md-primary no-border-no-outline" ng-click="orderingVideos('oldest')" ng-keyup="orderingVideos('oldest')">
+                        Más antiguos
+                    </md-radio-button>
+                    <md-radio-button value="new" class="md-primary no-border-no-outline" ng-click="orderingVideos('new')" ng-keyup="orderingVideos('new')">
+                        Nuevos
+                    </md-radio-button>
+                    <md-radio-button value="seen" class="md-primary no-border-no-outline" ng-click="orderingVideos('seen')" ng-keyup="orderingVideos('seen')">
+                        Vistos
+                    </md-radio-button>
+
+                </md-radio-group>
+
+            </div>
+        </div>
+
+    </md-sidenav>
+</div>

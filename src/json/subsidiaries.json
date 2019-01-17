@@ -1,0 +1,138 @@
+{
+	"responseCode": {
+        "status": 200,
+        "descripcion": ""
+    },
+    "data": [
+    	{
+			"name": "Sucursal Centro 1",
+			"id": 1,
+			"zipCode": 68093,
+			"poc": {
+				"name": "POC #1",
+				"id": 1
+			},
+			"status": 1
+
+		},
+		{
+			"name": "Sucursal Doctores",
+			"id": 2,
+			"zipCode": 8798793,
+			"poc": {
+				"name": "POC #1",
+				"id": 1
+			},
+			"status": 1
+
+		},
+		{
+			"name": "Sucursal Obrera",
+			"id": 3,
+			"zipCode": 879234,
+			"poc": {
+				"name": "POC #1",
+				"id": 1
+			},
+			"status": 1
+
+		},
+		{
+			"name": "Sucursal Merced",
+			"id": 4,
+			"zipCode": 980234,
+			"poc": {
+				"name": "POC #1",
+				"id": 1
+			},
+			"status": 0
+
+		},
+		{
+			"name": "Sucursal Catedral",
+			"id": 5,
+			"zipCode": 328479,
+			"poc": {
+				"name": "POC #1",
+				"id": 1
+			},
+			"status": 1
+
+		},
+		{
+			"name": "Sucursal Alameda",
+			"id": 6,
+			"zipCode": 879234,
+			"poc": {
+				"name": "POC #1",
+				"id": 1
+			},
+			"status": 0
+		},
+		{
+			"name": "Sucursal Sur 1",
+			"id": 7,
+			"zipCode": 887923,
+			"poc": {
+				"name": "POC #2",
+				"id": 2
+			},
+			"status": 1
+
+		},
+		{
+			"name": "Sucursal Coyoacán",
+			"id": 8,
+			"zipCode": 8798793,
+			"poc": {
+				"name": "POC #4",
+				"id": 4
+			},
+			"status": 0
+
+		},
+		{
+			"name": "Sucursal Culhuacán",
+			"id": 9,
+			"zipCode": 9802342,
+			"poc": {
+				"name": "POC #4",
+				"id": 4
+			},
+			"status": 0
+
+		},
+		{
+			"name": "Sucursal Xochimilco",
+			"id": 10,
+			"zipCode": 2345353,
+			"poc": {
+				"name": "POC #1",
+				"id": 1
+			},
+			"status": 0
+
+		},
+		{
+			"name": "Sucursal Tepepan",
+			"id": 11,
+			"zipCode": 879234,
+			"poc": {
+				"name": "POC #3",
+				"id": 3
+			},
+			"status": 1
+
+		},
+		{
+			"name": "Sucursal Tlalpan",
+			"id": 12,
+			"zipCode": 140983,
+			"poc": {
+				"name": "POC #3",
+				"id": 3
+			},
+			"status": 0
+		}
+    ]
+}

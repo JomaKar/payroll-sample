@@ -1,0 +1,36 @@
+<div layout='column' class="admin-control-area-container">
+
+	<div class="controllers-panel" layout="column">
+		<div class="action-type-and-producer-section" md-whiteframe="2" layout layout-align="space-between">
+			<div class="action-new-title">
+				Alta de {{viewValue.charAt(0).toUpperCase() + viewValue.substring(1)}}
+			</div>
+
+            <div class="CTA-new-target-user-container" layout>
+            	<button class="new-button no-border-no-outline" ng-click="adminDialogShow($event, 'new')" ng-disabled="!activatingNews || !withAminPriviledges">
+            		{{(shortText == 'Sucursal') ? 'NUEVA ' + shortText.toUpperCase() : 'NUEVO ' + shortText.toUpperCase()}}
+            	</button>
+            </div>
+		</div>
+		<div class="filter-bottom-section" md-whiteframe="2" layout>
+			<div class="enterprise-selector-wrapper" flex="50">
+				<md-select ng-model="onlyShowActives" placeholder="Mostrar" class="md-no-underline" aria-label="active-elements">
+                    <md-option ng-value="1" ng-click="changeVisibleElements(1)" ng-keydown="changeVisibleElements(1)" >
+                        {{viewValue.charAt(0).toUpperCase() + viewValue.substring(1, $scope.viewValue.indexOf(' ')) + ' Activos'}}
+                    </md-option>
+                    <md-option ng-value="0" ng-click="changeVisibleElements(0)" ng-keydown="changeVisibleElements(0)" >
+                        {{viewValue.charAt(0).toUpperCase() + viewValue.substring(1, $scope.viewValue.indexOf(' ')) + ' Inactivos'}}
+                    </md-option>
+                </md-select>
+			</div>
+			<div class="search-input-wrapper" flex="50" layout>
+				<input type="text" class="no-border-no-outline" ng-model="accountToSearch" flex="90" placeholder="Buscar por nombre o registro" ng-keyup="searching($event)">
+				<span class="icon-model icon-search"></span>
+			</div>
+		</div>
+	</div>
+
+	<div class="users-target-list-wrapper" layout md-whiteframe="2" ng-include="listView">
+	</div>
+	
+</div>

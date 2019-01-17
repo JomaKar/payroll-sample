@@ -1,0 +1,103 @@
+{
+  "responseCode": {
+    "status": 200,
+    "message": "wths"
+  },
+  "data": [
+              {
+                "name": "Aguascalientes"
+              },
+              {
+                "name": "Baja California"
+              },
+              {
+                "name": "Baja California Sur"
+              },
+              {
+                "name": "Campeche"
+              },
+              {
+                "name": "Coahuila"
+              },
+              {
+                "name": "Colima"
+              },
+              {
+                "name": "Chiapas"
+              },
+              {
+                "name": "Chihuahua"
+              },
+              {
+                "name": "Distrito Federal"
+              },
+              {
+                "name": "Guanajuato"
+              },
+              {
+                "name": "Guerrero"
+              },
+              {
+                "name": "Hidalgo"
+              },
+              {
+                "name": "Jalisco"
+              },
+              {
+                "name": "México"
+              },
+              {
+                "name": "Michoacán"
+              },
+              {
+                "name": "Morelos"
+              },
+              {
+                "name": "Nayarit"
+              },
+              {
+                "name": "León"
+              },
+              {
+                "name": "Oaxaca León"
+              },
+              {
+                "name": "Puebla"
+              },
+              {
+                "name": "Querétaro"
+              },
+              {
+                "name": "Roo"
+              },
+              {
+                "name": "Potosí Roo"
+              },
+              {
+                "name": "Sinaloa Luis Potosí"
+              },
+              {
+                "name": "Sonora"
+              },
+              {
+                "name": "Tabasco"
+              },
+              {
+                "name": "Tamaulipas"
+              },
+              {
+                "name": "Tlaxcala"
+              },
+              {
+                "name": "Veracruz"
+              },
+              {
+                "name": "Yucatán"
+              },
+              {
+                "name": "Zacatecas"
+              }
+          ]
+}
+
+

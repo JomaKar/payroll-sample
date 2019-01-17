@@ -1,0 +1,252 @@
+.spaced-container {
+  padding: 48px 0 100px;
+  box-sizing: border-box;
+  max-height: 100%;
+  height: 100%; }
+  .spaced-container .header-title {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.0;
+    letter-spacing: -0.2px;
+    color: #333;
+    margin-bottom: 36px; }
+  .spaced-container .profile-view-content {
+    max-width: 80%;
+    height: 100%; }
+    .spaced-container .profile-view-content profile-left-side .contentLeftLocation md-sidenav {
+      width: 100%;
+      background-color: transparent; }
+      .spaced-container .profile-view-content profile-left-side .contentLeftLocation md-sidenav .new-button-wrapper {
+        background-color: white;
+        height: 60px;
+        margin-bottom: 12px;
+        padding: 12px 24px;
+        display: flex;
+        justify-content: space-between;
+        line-height: 1.7;
+        font-size: 20px; }
+        .spaced-container .profile-view-content profile-left-side .contentLeftLocation md-sidenav .new-button-wrapper button {
+          font-size: 14px;
+          width: 128px;
+          height: 36px; }
+      .spaced-container .profile-view-content profile-left-side .contentLeftLocation md-sidenav .down-area-sidenav .order-options-wrapper {
+        height: calc(70% - 148px);
+        min-height: fit-content;
+        padding-top: 32px; }
+        .spaced-container .profile-view-content profile-left-side .contentLeftLocation md-sidenav .down-area-sidenav .order-options-wrapper .control-title {
+          font-size: 14px;
+          line-height: 1.43;
+          letter-spacing: -0.2px;
+          margin: 0;
+          margin-bottom: 26px; }
+        .spaced-container .profile-view-content profile-left-side .contentLeftLocation md-sidenav .down-area-sidenav .order-options-wrapper md-radio-group md-radio-button {
+          margin-bottom: 24px;
+          font-size: 16px;
+          line-height: 1.5; }
+    .spaced-container .profile-view-content profile-controll-area {
+      padding-left: 20px;
+      box-sizing: border-box; }
+      .spaced-container .profile-view-content profile-controll-area .profile-control-area-container {
+        height: 100%; }
+        .spaced-container .profile-view-content profile-controll-area .profile-control-area-container .video-list-wrapper {
+          overflow-y: scroll;
+          height: calc(100% - 10px);
+          background-color: white;
+          max-height: 440px;
+          padding: 10px;
+          flex-wrap: wrap; }
+          .spaced-container .profile-view-content profile-controll-area .profile-control-area-container .video-list-wrapper .video-itm {
+            width: calc(33% - 20px);
+            margin: 10px;
+            background-color: white;
+            float: left;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer; }
+            .spaced-container .profile-view-content profile-controll-area .profile-control-area-container .video-list-wrapper .video-itm .resume-img-div {
+              width: 100%;
+              height: 50%;
+              border-radius: 0 !important; }
+            .spaced-container .profile-view-content profile-controll-area .profile-control-area-container .video-list-wrapper .video-itm .video-title {
+              font-size: 16px;
+              margin-top: 12px;
+              letter-spacing: -.2px;
+              line-height: 1.25;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+            .spaced-container .profile-view-content profile-controll-area .profile-control-area-container .video-list-wrapper .video-itm .micro-info-wrapper {
+              display: flex;
+              justify-content: flex-start;
+              width: 100%;
+              height: auto; }
+              .spaced-container .profile-view-content profile-controll-area .profile-control-area-container .video-list-wrapper .video-itm .micro-info-wrapper .duration-span {
+                display: block;
+                font-size: 12px;
+                opacity: .5;
+                color: #000;
+                margin-right: 16px; }
+              .spaced-container .profile-view-content profile-controll-area .profile-control-area-container .video-list-wrapper .video-itm .micro-info-wrapper .recent-video-highlighter {
+                display: flex;
+                color: #d30011;
+                font-size: 12px; }
+                .spaced-container .profile-view-content profile-controll-area .profile-control-area-container .video-list-wrapper .video-itm .micro-info-wrapper .recent-video-highlighter .red-dot-span {
+                  display: block;
+                  background-color: #d30011;
+                  width: 8px;
+                  height: 8px;
+                  border-radius: 50%;
+                  margin-right: 8px;
+                  margin-top: 2.5px; }
+
+.dialog-box {
+  width: 640px; }
+  .dialog-box .dialog-container {
+    padding: 36px 24px 45px 24px; }
+    .dialog-box .dialog-container .content-wrapper .model-form {
+      margin: 0;
+      width: 100%; }
+      .dialog-box .dialog-container .content-wrapper .model-form .form-inputs-row {
+        height: 70px;
+        width: 100%; }
+        .dialog-box .dialog-container .content-wrapper .model-form .form-inputs-row.no-image {
+          padding-left: 50px; }
+        .dialog-box .dialog-container .content-wrapper .model-form .form-inputs-row .img-wrapper {
+          margin: 5px 26px 0 0;
+          width: 24px;
+          height: 60px;
+          display: flex;
+          justify-content: flex-end;
+          position: relative; }
+          .dialog-box .dialog-container .content-wrapper .model-form .form-inputs-row .img-wrapper .icon-container {
+            display: block;
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            top: 0;
+            right: 0;
+            opacity: .3; }
+            .dialog-box .dialog-container .content-wrapper .model-form .form-inputs-row .img-wrapper .icon-container .icon-model {
+              width: 24px;
+              height: 24px; }
+        .dialog-box .dialog-container .content-wrapper .model-form .form-inputs-row .inputs-wrapper {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          position: relative; }
+          .dialog-box .dialog-container .content-wrapper .model-form .form-inputs-row .inputs-wrapper .input-file-wrapper {
+            height: 36px;
+            width: 152px;
+            position: relative;
+            top: 12px;
+            cursor: pointer; }
+            .dialog-box .dialog-container .content-wrapper .model-form .form-inputs-row .inputs-wrapper .input-file-wrapper .input-button {
+              width: 100%;
+              height: 100%;
+              position: relative;
+              font-size: 14px;
+              z-index: -1;
+              display: block;
+              padding: 8px 21px;
+              box-sizing: border-box; }
+          .dialog-box .dialog-container .content-wrapper .model-form .form-inputs-row .inputs-wrapper md-input-container {
+            width: 240px;
+            box-sizing: border-box;
+            height: 100%; }
+            .dialog-box .dialog-container .content-wrapper .model-form .form-inputs-row .inputs-wrapper md-input-container textarea {
+              box-shadow: 0 1px rgba(0, 0, 0, 0.12); }
+            .dialog-box .dialog-container .content-wrapper .model-form .form-inputs-row .inputs-wrapper md-input-container:first-of-type {
+              margin-right: 19px; }
+            .dialog-box .dialog-container .content-wrapper .model-form .form-inputs-row .inputs-wrapper md-input-container.big-name-input {
+              width: 372px; }
+            .dialog-box .dialog-container .content-wrapper .model-form .form-inputs-row .inputs-wrapper md-input-container.full-input-wrapper {
+              width: 100%; }
+            .dialog-box .dialog-container .content-wrapper .model-form .form-inputs-row .inputs-wrapper md-input-container.md-input-focused label {
+              color: rgba(0, 0, 0, 0.54); }
+            .dialog-box .dialog-container .content-wrapper .model-form .form-inputs-row .inputs-wrapper md-input-container label {
+              color: rgba(0, 0, 0, 0.54); }
+            .dialog-box .dialog-container .content-wrapper .model-form .form-inputs-row .inputs-wrapper md-input-container input {
+              border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+              width: 100%;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+              .dialog-box .dialog-container .content-wrapper .model-form .form-inputs-row .inputs-wrapper md-input-container input.words-hidden {
+                color: white; }
+              .dialog-box .dialog-container .content-wrapper .model-form .form-inputs-row .inputs-wrapper md-input-container input:focus {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
+            .dialog-box .dialog-container .content-wrapper .model-form .form-inputs-row .inputs-wrapper md-input-container .name-holder {
+              display: block;
+              width: 100%;
+              height: 29px;
+              z-index: 2;
+              position: absolute;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              line-height: 2; }
+          .dialog-box .dialog-container .content-wrapper .model-form .form-inputs-row .inputs-wrapper .real-input-file {
+            width: 100%;
+            height: 36px;
+            opacity: 0;
+            z-index: 3;
+            position: absolute;
+            top: 11px;
+            cursor: pointer; }
+    .dialog-box .dialog-container .content-wrapper .video-dialog-content-wrapper .video-wrapper {
+      width: 100%; }
+      .dialog-box .dialog-container .content-wrapper .video-dialog-content-wrapper .video-wrapper video {
+        width: 100%;
+        height: 100%; }
+    .dialog-box .dialog-container .content-wrapper .video-dialog-content-wrapper .micro-info-wrapper .video-title {
+      font-weight: 300;
+      line-height: 1.4;
+      font-size: 20px;
+      color: rgba(51, 51, 51, 0.87);
+      margin-top: 24.8px;
+      margin-bottom: 12px; }
+    .dialog-box .dialog-container .content-wrapper .video-dialog-content-wrapper .micro-info-wrapper .video-duration {
+      margin-bottom: 26px;
+      font-size: 12px;
+      line-height: 1.33;
+      color: black;
+      opacity: .5;
+      letter-spacing: -0.2px; }
+    .dialog-box .dialog-container .content-wrapper .video-dialog-content-wrapper .actions-wrapper {
+      display: flex;
+      justify-content: flex-start; }
+      .dialog-box .dialog-container .content-wrapper .video-dialog-content-wrapper .actions-wrapper .dialog-rejecting-button {
+        margin-right: 20px; }
+      .dialog-box .dialog-container .content-wrapper .video-dialog-content-wrapper .actions-wrapper button {
+        height: 36px;
+        padding: 8px 20px;
+        box-sizing: border-box; }
+    .dialog-box .dialog-container .content-wrapper .video-dialog-content-wrapper hr {
+      margin: 30px 0;
+      border-width: .8px; }
+    .dialog-box .dialog-container .content-wrapper .video-dialog-content-wrapper .resume-wrapper {
+      font-size: 14px; }
+    .dialog-box .dialog-container .success-message {
+      font-size: 16px;
+      line-height: 1.5;
+      color: rgba(51, 51, 51, 0.87); }
+  .dialog-box .dialog-actions-container {
+    height: 92px;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box; }
+    .dialog-box .dialog-actions-container button {
+      height: 36px;
+      width: 176px;
+      color: white;
+      padding: 10px 0; }
+      .dialog-box .dialog-actions-container button span {
+        font-size: 14px;
+        font-weight: 500;
+        width: 100%;
+        text-align: center;
+        display: block; }
+      .dialog-box .dialog-actions-container button.back-control {
+        margin-right: 20px;
+        background-color: #4a6176; }
+
+/*# sourceMappingURL=profile-main.css.map */

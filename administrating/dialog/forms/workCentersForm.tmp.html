@@ -1,0 +1,92 @@
+<form id="modelForm" layout="column" ng-init="basicSetup(templateForm)" name="templateForm" ng-blur="validateForm(templateForm)" ng-click="validateForm(templateForm)" ng-keyup="validateForm(templateForm)" class="no-border-no-outline centers-form">
+	<div class="form-inputs-row first-definition-row" layout>
+		<div class="img-wrapper">
+			<span class="icon-container">
+				<span class="icon-model icon-info-outline"></span>
+			</span>
+		</div>
+		<div class="inputs-wrapper">
+			<md-input-container class="registration-record-input small-number-input">
+				<label class="no-color-on-focus">Clave del centro</label>
+				<input name="workCenterId" notempty required type="number" ng-model="target.id">
+			</md-input-container>
+			<md-input-container class="registration-name-input big-name-input">
+				<label class="no-color-on-focus">Nombre</label>
+				<input name="workCenterName" notempty required type="text" ng-model="target.name">
+			</md-input-container>
+		</div>
+	</div>
+	<div class="form-inputs-row location-first-row" layout>
+		<div class="img-wrapper">
+			<span class="icon-container">
+				<span class="icon-model icon-location-on"></span>
+			</span>
+		</div>
+		<div class="inputs-wrapper">
+			<md-input-container class="registration-record-input big-name-input">
+				<label class="no-color-on-focus">Calle, número exterior e interior</label>
+				<input name="workCenterStreet" notempty required type="text" ng-model="target.location.street">
+			</md-input-container>
+			<md-input-container class="registration-name-input small-number-input">
+				<label class="no-color-on-focus">Código postal</label>
+				<input name="workCenterZipCode" notempty required type="number" ng-model="target.location.zipCode">
+			</md-input-container>
+		</div>
+	</div>
+	<div class="form-inputs-row neighborhood-row no-image" layout>
+		<md-input-container class="full-input-wrapper">
+			<label class="no-color-on-focus">Colonia</label>
+			<input name="workCenterNeighborhood" notempty required type="text" validmail ng-model="target.location.neighborhood">
+		</md-input-container>
+	</div>
+	<div class="form-inputs-row global-location-row no-image" layout>
+		<md-input-container class="region-input-wrapper middle-sized-width">
+			<label class="no-color-on-focus">Municipio</label>
+			<input name="workCenterRegion" notempty required type="text" ng-model="target.location.region">
+		</md-input-container>
+		<md-input-container class="state-input-wrapper middle-sized-width">
+			<label class="no-color-on-focus">Estado</label>
+			<input name="workCenterState" notempty required type="text" ng-model="target.location.state">
+		</md-input-container>
+	</div>
+	<div class="form-inputs-row contact-row" layout>
+		<div class="img-wrapper">
+			<span class="icon-container">
+				<span class="icon-model icon-contact-phone"></span>
+			</span>
+		</div>
+		<div class="inputs-wrapper">
+			<md-input-container class="registration-record-input big-name-input">
+				<label class="no-color-on-focus">Contacto</label>
+				<input name="workCenterContactName" notempty required type="text" ng-model="target.contactData.name">
+			</md-input-container>
+			<md-input-container class="registration-name-input small-number-input">
+				<label class="no-color-on-focus">Teléfono</label>
+				<input name="workCenterContactPhone" notempty required type="number" ng-model="target.contactData.phone">
+			</md-input-container>
+		</div>
+	</div>
+	<div class="form-inputs-row neighborhood-row no-image" layout>
+		<md-input-container class="email-input-wrapper big-name-input">
+			<label class="no-color-on-focus">Email</label>
+			<input name="workCenterEmail" notempty required type="email" validmail ng-model="target.contactData.email">
+		</md-input-container>
+	</div>
+	<div class="form-inputs-row status-row" layout>
+		<div class="img-wrapper">
+			<span class="icon-container">
+				<span class="icon-model icon-power-on"></span>
+			</span>
+		</div>
+		<div class="inputs-wrapper">
+			<md-input-container class="status-select-container">
+				<label class="no-color-on-focus">Estatus</label>
+				<md-select name="status" required ng-model="target.status" ng-change="validateForm(templateForm)">
+					<md-option ng-value="status" ng-repeat="status in statusOptions">
+						{{status}}
+					</md-option>
+				</md-select>
+			</md-input-container>
+		</div>
+	</div>
+</form>

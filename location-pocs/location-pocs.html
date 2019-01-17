@@ -1,0 +1,10 @@
+<md-content flex layout="row"  ng-init="initPayrollMaps()">
+  <div class="pocs-map-section contentLeftLocation" layout="column">
+      <location-sidenav></location-sidenav>
+      <agent-details id="detailsAgentContainer" ng-if="activeDetail" class="agent-details-main-wrapper"></agent-details>
+  </div>
+  <div id="contentLocationMap" layout="column" flex>
+  	<!--  -->
+    <div id="map"></div>
+  </div>
+</md-content>

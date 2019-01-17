@@ -1,0 +1,100 @@
+<form id="modelForm" layout="column" ng-init="basicSetup(templateForm)" name="templateForm" ng-blur="validateForm(templateForm)" ng-click="validateForm(templateForm)" ng-keyup="validateForm(templateForm)" class="no-border-no-outline">
+	<div class="form-inputs-row first-definition-row" layout>
+		<div class="img-wrapper on-user-img">
+			<div disabled ng-style="{'background-image': 'url(' + userImage +')'}" class="image-background-model userImg"></div>
+			<div class="image-loader-wrapper">
+				<input type="file" disabled class="image-loader cursor-not-allowed" onchange="angular.element(this).scope().fileNameChanged(this)">
+				<span class="photo-img">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+					    <defs>
+					        <path id="ca" d="M12 16.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zM9 3L7.17 5H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2h-3.17L15 3H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
+					    </defs>
+					    <g fill="none" fill-rule="evenodd">
+					        <mask id="b" fill="#fff">
+					            <use xlink:href="#ca"/>
+					        </mask>
+					        <use fill="#4a90e2" fill-rule="nonzero" xlink:href="#ca"/>
+					    </g>
+					</svg>
+				</span>
+				<span class="text">
+					Foto
+				</span>
+			</div>
+		</div>
+		<div class="inputs-wrapper">
+			<md-input-container class="registration-record-input">
+				<label class="no-color-on-focus">Registro</label>
+				<input name="userId" notempty required type="number" ng-model="target.userId">
+			</md-input-container>
+			<md-input-container class="rol-select-container">
+				<label class="no-color-on-focus">Rol</label>
+				<md-select ng-model="target.rol" required name="rol" ng-change="changeRol(templateForm)">
+					<md-option ng-repeat="rol in rols" ng-value="rol">
+					{{rol}}
+					</md-option>
+				</md-select>
+			</md-input-container>
+		</div>
+	</div>
+	<div class="form-inputs-row names-row no-image-on-user" layout>
+		<md-input-container class="full-input-wrapper">
+			<label class="no-color-on-focus">Nombre Completo</label>
+			<input name="userName" notempty required type="text" ng-model="target.userName">
+		</md-input-container>
+	</div>
+	<div class="form-inputs-row email-row no-image-on-user" layout>
+		<md-input-container class="full-input-wrapper">
+			<label class="no-color-on-focus">Email</label>
+			<input name="email" notempty required type="email" validmail ng-model="target.cveEmail">
+		</md-input-container>
+	</div>
+	<div class="form-inputs-row phones-row no-image-on-user" layout>
+		<md-input-container class="cellphone-input-wrapper">
+			<label class="no-color-on-focus">Celular</label>
+			<input name="cellPhoneNumber" notempty required type="number" ng-model="target.cellPhoneNumber">
+		</md-input-container>
+		<md-input-container class="phone-input-wrapper">
+			<label class="no-color-on-focus">Teléfono</label>
+			<input name="phoneNumber" notempty required type="number" ng-model="target.phoneNumber">
+		</md-input-container>
+	</div>
+	<div class="form-inputs-row contact-reference-row" layout>
+		<div class="img-wrapper on-user-img">
+			<span class="icon-container">
+				<span class="icon-model icon-people"></span>
+			</span>
+		</div>
+		<div class="inputs-wrapper">
+			<md-input-container class="contact-select-container">
+				<label class="no-color-on-focus">Líder</label>
+				<md-select name="liderName" ng-disabled="!userHasLider" ng-class="{'cursor-not-allowed': !userHasLider}" required ng-model="target.leaderName" ng-change="validateForm(templateForm)">
+					<md-option ng-repeat="lider in possibleLeaders" ng-value="lider.name" ng-click="contactReferenceChange(lider.id)" ng-keydown="contactReferenceChange(lider.id)">
+						{{lider.name}}
+					</md-option>
+				</md-select>
+			</md-input-container>
+			<md-input-container class="contact-record-input">
+				<label class="no-color-on-focus">Registro del líder</label>
+				<input name="liderID" notempty required type="number" ng-disabled="!userHasLider" ng-class="{'cursor-not-allowed': !userHasLider}" ng-model="target.leaderId">
+			</md-input-container>
+		</div>
+	</div>
+	<div class="form-inputs-row status-row" layout>
+		<div class="img-wrapper on-user-img">
+			<span class="icon-container">
+				<span class="icon-model icon-power-on"></span>
+			</span>
+		</div>
+		<div class="inputs-wrapper">
+			<md-input-container class="status-select-container">
+				<label class="no-color-on-focus">Estatus</label>
+				<md-select name="status" required ng-model="target.status" ng-change="validateForm(templateForm)">
+					<md-option ng-value="status.val" ng-repeat="status in statusOptions">
+						{{status.name}}
+					</md-option>
+				</md-select>
+			</md-input-container>
+		</div>
+	</div>
+</form>

@@ -1,0 +1,68 @@
+<form class="model-form no-border-no-outline" layout="column" ng-init="basicSetup()" name="templateForm" ng-blur="validateForm(templateForm)" ng-click="validateForm(templateForm)" ng-keyup="validateForm(templateForm)" class="no-border-no-outline centers-form">
+	<div class="form-inputs-row" layout>
+		<div class="img-wrapper">
+			<span class="icon-container">
+				<span class="icon-model icon-t-word"></span>
+			</span>
+		</div>
+		<div class="inputs-wrapper">
+			<md-input-container class="title-input full-input-wrapper">
+				<label class="no-color-on-focus">Título</label>
+				<input name="videoTitle" notempty required type="text" ng-model="target.title">
+			</md-input-container>
+		</div>
+	</div>
+	<div class="form-inputs-row" layout>
+		<div class="img-wrapper">
+			<span class="icon-container">
+				<span class="icon-model icon-play-video"></span>
+			</span>
+		</div>
+		<div class="inputs-wrapper">
+			<md-input-container id="videoNameInputContainer" class="registration-record-input big-name-input">
+				<label class="no-color-on-focus">Video</label>
+				<input name="videoName" notempty required type="text" ng-model="target.videoUrl" class="words-hidden">
+				<span id="videNameHolder" class="name-holder"></span>
+			</md-input-container>
+			
+			<div class="input-file-wrapper">
+				<span class="input-button dialog-rejecting-button">SUBIR ARCHIVO</span>
+			</div>
+
+			<input type="file" class="real-input-file" onchange="angular.element(this).scope().fileNameChanged(this, 'videoUrl')">
+		</div>
+	</div>
+	<div class="form-inputs-row neighborhood-row" layout>
+		<div class="img-wrapper">
+			<span class="icon-container">
+				<span class="icon-model icon-image"></span>
+			</span>
+		</div>
+		<div class="inputs-wrapper">
+			<md-input-container id="imageNameInputContainer" class="registration-record-input big-name-input">
+				<label class="no-color-on-focus">Imagen</label>
+				<input name="imageName" notempty required type="text" ng-model="target.resumeImg" class="words-hidden">
+				<span id="imageNameHolder" class="name-holder"></span>
+			</md-input-container>
+			
+			<div class="input-file-wrapper">
+				<span class="input-button dialog-rejecting-button">SUBIR ARCHIVO</span>
+			</div>
+
+			<input type="file" class="real-input-file" onchange="angular.element(this).scope().fileNameChanged(this, 'resumeImg')">
+		</div>
+	</div>
+	<div class="form-inputs-row" layout>
+		<div class="img-wrapper">
+			<span class="icon-container">
+				<span class="icon-model icon-document"></span>
+			</span>
+		</div>
+		<div class="inputs-wrapper">
+			<md-input-container class="registration-record-input full-input-wrapper">
+				<label class="no-color-on-focus">Descripción</label>
+				<textarea class="no-border-no-outline" name="videoDescription" notempty required ng-model="target.resume"></textarea>
+			</md-input-container>
+		</div>
+	</div>
+</form>

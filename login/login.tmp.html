@@ -1,0 +1,34 @@
+<div class="login-page image-background-model">
+	<div class="box-container">
+		<div class="header-part">
+			<img ng-src="{{(folderStructureUrl) ? folderStructureUrl + 'src/images/logo.png' : 'src/images/logo.png'}}" class="logo">
+			<h1 class="header-txt">
+				PayRoll Office Center
+			</h1>
+		</div>
+		<div class="login-box">
+			<h1 class="welcome">
+				Bienvenido
+			</h1>
+			<p class="txt">
+				Para iniciar sesión, ingrese sus datos de acceso
+			</p>
+			<form novalidate id="loginForm" class="no-border-no-outline" name="loginForm" ng-blur="checkContent(loginForm)" ng-click="checkContent(loginForm)" ng-keyup="checkContent(loginForm)" ng-submit="checkLogin($event)">
+				<md-input-container class="password-record-input">
+					<label class="no-color-on-focus">Nombre de usuario</label>
+					<input required notempty type="text" class="login-input" ng-model="theUser.userId">
+				</md-input-container>
+				<md-input-container class="password-record-input">
+					<label class="no-color-on-focus">Contraseña</label>
+					<input required notempty type="password" show-password="showPassword" class="login-input" ng-model="theUser.password">
+				</md-input-container>
+				<md-checkbox ng-click="seePass()" aria-label="key-see">
+					Ver clave
+				</md-checkbox>
+				<button type="submit" class="no-border-no-outline dialog-accepting-button" ng-disabled="!loginForm.$valid">
+					INICIAR SESIÓN
+				</button>
+			</form>
+		</div>
+	</div>
+</div>

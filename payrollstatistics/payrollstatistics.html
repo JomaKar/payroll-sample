@@ -1,0 +1,80 @@
+<md-dialog class="statistics">
+  <form ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <div class="title">
+          <h2>{{actualPOC.name}}</h2>
+          <span flex>15 asesores autorizados, 15 activos</span>
+        </div>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <svg fill="#fff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+      <div class="md-dialog-content" id="cont-graphics" layout>
+        <div class="bar-graphic-block" flex="33">
+          <p>{{integrationsInfo.succededIntegrations}}</p>
+          <span>Empleados integrados</span>
+          <div class="graphic">  
+              <canvas id="bar" class="chart chart-bar" chart-data="dataBar" chart-labels="labelsBar" chart-colors="barColors">
+              </canvas>
+          </div>
+        </div>
+        <div class="doughnut-graphic-block" flex="33">
+          <p>{{successIntegrationsPct}}%</p>
+          <span>De completados este mes, {{notStartedIntegrationsPct}}% sin iniciar</span>
+          <div class="bottom-section" layout>
+              <div class="graphic">
+                  <canvas id="doughnut" class="chart chart-doughnut" chart-data="doughnutData" chart-labels="doughnutLabels" chart-colors="doughnutColors">
+                  </canvas>
+              </div>
+              <div class="reference-colors">
+                <ul class="stats-meaning-list">
+                  <li class="stat-itm">
+                    <span class="result-color success"></span>
+                    <span class="result-text">Completados</span>
+                  </li>
+                  <li class="stat-itm">
+                    <span class="result-color not-starting"></span>
+                    <span class="result-text">Sin iniciar</span>
+                  </li>
+                  <li class="stat-itm">
+                    <span class="result-color pending"></span>
+                    <span class="result-text">Pendientes</span>
+                  </li>
+                </ul>
+              </div>
+          </div>
+        </div>
+        <div class="agents-block" flex="33">
+          <p>{{bestAgentName}}</p>
+          <span>Asesor más activo</span>
+          <div class="info-section">
+            <md-list-item class="md-3-line md-dense" ng-repeat="agent in bestAgentsOnMonth | orderBy: 'successRanking'">
+              <div class="image-container">
+                  <span class="agent-img image-background-model" ng-style="{'background-image': 'url(' + (agent.profileImg ? agent.profileImg : folderStructureUrl + 'src/images/myAvatar.png') + ')'}"></span>
+                  <span class="indexBlock">{{$index + 1}}</span>
+              </div>
+              <div class="md-list-item-text" layout="column">
+                  <div class="md-caption text-member-name name">{{agent.userName}}</div>
+                  <div layout="row" layout-wrap class="bar-integrations" flex>
+                      <div class="not-starting-integrations c-red" ng-style="{width: (agent.integrations.notStarting / (agent.integrations.total / 100)) + '%'}"></div>
+                      <div class="pending-integrations c-blue" ng-style="{width: (agent.integrations.pending / (agent.integrations.total / 100)) + '%'}"></div>
+                      <div class="success-integrations c-green" ng-style="{width: (agent.integrations.success / (agent.integrations.total / 100)) + '%'}"></div>
+                  </div>
+                  <div class="text-integrations-member ints">
+                    {{agent.integrations.success}} Completadas, {{agent.integrations.notStarting}} sin iniciar
+                  </div>
+              </div>
+            </md-list-item>
+          </div>
+        </div>
+      </div>
+    </md-dialog-content>
+  </form>
+</md-dialog>

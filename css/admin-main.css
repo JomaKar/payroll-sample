@@ -1,0 +1,276 @@
+.spaced-container {
+  padding: 48px 0 100px;
+  box-sizing: border-box;
+  max-height: 100%; }
+  .spaced-container .header-title {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.0;
+    letter-spacing: -0.2px;
+    color: #333;
+    margin-bottom: 36px; }
+  .spaced-container .admin-view-content {
+    max-width: 80%; }
+    .spaced-container .admin-view-content admin-left-side .contentLeftLocation md-sidenav {
+      width: 100%;
+      background-color: transparent; }
+      .spaced-container .admin-view-content admin-left-side .contentLeftLocation md-sidenav #wrapper-info-poc .admin-pocs-select-wrapper {
+        height: 60px;
+        background-color: #385a9e; }
+        .spaced-container .admin-view-content admin-left-side .contentLeftLocation md-sidenav #wrapper-info-poc .admin-pocs-select-wrapper md-select {
+          background-color: transparent;
+          margin: 16px 0 16px !important; }
+          .spaced-container .admin-view-content admin-left-side .contentLeftLocation md-sidenav #wrapper-info-poc .admin-pocs-select-wrapper md-select .md-select-value {
+            padding: 0 20px !important;
+            background-color: #385a9e;
+            font-size: 16px;
+            color: white; }
+      .spaced-container .admin-view-content admin-left-side .contentLeftLocation md-sidenav #wrapper-info-poc .poc-members-wrapper {
+        height: calc(70% - 148px);
+        min-height: fit-content;
+        padding-top: 32px; }
+        .spaced-container .admin-view-content admin-left-side .contentLeftLocation md-sidenav #wrapper-info-poc .poc-members-wrapper .target-users-to-see-control-title {
+          font-size: 14px;
+          line-height: 1.43;
+          letter-spacing: -0.2px;
+          margin: 0;
+          margin-bottom: 26px; }
+        .spaced-container .admin-view-content admin-left-side .contentLeftLocation md-sidenav #wrapper-info-poc .poc-members-wrapper md-radio-group md-radio-button {
+          margin-bottom: 24px;
+          font-size: 16px;
+          line-height: 1.5; }
+    .spaced-container .admin-view-content admin-controll-area {
+      padding-left: 20px;
+      box-sizing: border-box; }
+      .spaced-container .admin-view-content admin-controll-area .admin-control-area-container .controllers-panel {
+        background-color: transparent;
+        min-height: 135px; }
+        .spaced-container .admin-view-content admin-controll-area .admin-control-area-container .controllers-panel .action-type-and-producer-section {
+          padding: 12px 24px;
+          height: 63px;
+          background-color: white; }
+          .spaced-container .admin-view-content admin-controll-area .admin-control-area-container .controllers-panel .action-type-and-producer-section .action-new-title {
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 1.4;
+            margin-top: 2px;
+            letter-spacing: normal;
+            color: rgba(51, 51, 51, 0.87); }
+          .spaced-container .admin-view-content admin-controll-area .admin-control-area-container .controllers-panel .action-type-and-producer-section .CTA-new-target-user-container .new-button {
+            height: 36px;
+            background-color: #d30011;
+            color: white;
+            font-size: 14px;
+            padding: 0 15px; }
+            .spaced-container .admin-view-content admin-controll-area .admin-control-area-container .controllers-panel .action-type-and-producer-section .CTA-new-target-user-container .new-button:disabled {
+              background-color: #d7d8d6;
+              cursor: not-allowed; }
+        .spaced-container .admin-view-content admin-controll-area .admin-control-area-container .controllers-panel .filter-bottom-section {
+          border-bottom: 1px solid #e0e0e0;
+          box-sizing: border-box;
+          height: 60px;
+          background-color: white;
+          margin-top: 12px; }
+          .spaced-container .admin-view-content admin-controll-area .admin-control-area-container .controllers-panel .filter-bottom-section .enterprise-selector-wrapper {
+            border-right: 1px solid #e0e0e0;
+            box-sizing: border-box;
+            height: 60px; }
+            .spaced-container .admin-view-content admin-controll-area .admin-control-area-container .controllers-panel .filter-bottom-section .enterprise-selector-wrapper md-select {
+              margin: 16px 0 16px !important; }
+              .spaced-container .admin-view-content admin-controll-area .admin-control-area-container .controllers-panel .filter-bottom-section .enterprise-selector-wrapper md-select .md-select-value {
+                padding: 0 20px !important;
+                font-size: 16px; }
+          .spaced-container .admin-view-content admin-controll-area .admin-control-area-container .controllers-panel .filter-bottom-section .search-input-wrapper {
+            height: 60px; }
+            .spaced-container .admin-view-content admin-controll-area .admin-control-area-container .controllers-panel .filter-bottom-section .search-input-wrapper input {
+              padding-left: 24px;
+              font-size: 16px;
+              line-height: 1.0;
+              letter-spacing: -0.2px; }
+            .spaced-container .admin-view-content admin-controll-area .admin-control-area-container .controllers-panel .filter-bottom-section .search-input-wrapper span {
+              margin-top: 19px;
+              width: 24px;
+              height: 24px; }
+      .spaced-container .admin-view-content admin-controll-area .admin-control-area-container .users-target-list-wrapper {
+        overflow-y: scroll;
+        margin-top: 10px;
+        background-color: white;
+        max-height: 440px; }
+        .spaced-container .admin-view-content admin-controll-area .admin-control-area-container .users-target-list-wrapper .users-target-list {
+          padding: 0;
+          width: 100%;
+          margin: 0; }
+          .spaced-container .admin-view-content admin-controll-area .admin-control-area-container .users-target-list-wrapper .users-target-list .user-target-item {
+            height: 40px;
+            padding: 8px 0;
+            border-bottom: 1px solid #e0e0e0;
+            box-sizing: border-box; }
+            .spaced-container .admin-view-content admin-controll-area .admin-control-area-container .users-target-list-wrapper .users-target-list .user-target-item .itm-column {
+              display: flex;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+              .spaced-container .admin-view-content admin-controll-area .admin-control-area-container .users-target-list-wrapper .users-target-list .user-target-item .itm-column .data-span {
+                display: block;
+                font-size: inherit; }
+              .spaced-container .admin-view-content admin-controll-area .admin-control-area-container .users-target-list-wrapper .users-target-list .user-target-item .itm-column.first-column {
+                padding-left: 20px;
+                box-sizing: border-box;
+                font-size: 16px;
+                color: #333; }
+                .spaced-container .admin-view-content admin-controll-area .admin-control-area-container .users-target-list-wrapper .users-target-list .user-target-item .itm-column.first-column .edit-button {
+                  display: block;
+                  width: 24px;
+                  height: 24px;
+                  cursor: pointer;
+                  margin-right: 12px; }
+                  .spaced-container .admin-view-content admin-controll-area .admin-control-area-container .users-target-list-wrapper .users-target-list .user-target-item .itm-column.first-column .edit-button:disabled {
+                    opacity: .5; }
+                .spaced-container .admin-view-content admin-controll-area .admin-control-area-container .users-target-list-wrapper .users-target-list .user-target-item .itm-column.first-column .data-span {
+                  margin-top: 2px; }
+              .spaced-container .admin-view-content admin-controll-area .admin-control-area-container .users-target-list-wrapper .users-target-list .user-target-item .itm-column.second-column, .spaced-container .admin-view-content admin-controll-area .admin-control-area-container .users-target-list-wrapper .users-target-list .user-target-item .itm-column.third-column {
+                font-size: 12px;
+                color: rgba(0, 0, 0, 0.54);
+                padding-top: 4px; }
+                .spaced-container .admin-view-content admin-controll-area .admin-control-area-container .users-target-list-wrapper .users-target-list .user-target-item .itm-column.second-column .data-icon-wrapper, .spaced-container .admin-view-content admin-controll-area .admin-control-area-container .users-target-list-wrapper .users-target-list .user-target-item .itm-column.third-column .data-icon-wrapper {
+                  display: block;
+                  width: 16px;
+                  height: 16px;
+                  margin-right: 8px; }
+                  .spaced-container .admin-view-content admin-controll-area .admin-control-area-container .users-target-list-wrapper .users-target-list .user-target-item .itm-column.second-column .data-icon-wrapper span, .spaced-container .admin-view-content admin-controll-area .admin-control-area-container .users-target-list-wrapper .users-target-list .user-target-item .itm-column.third-column .data-icon-wrapper span {
+                    width: 16px;
+                    height: 16px;
+                    opacity: .3; }
+          .spaced-container .admin-view-content admin-controll-area .admin-control-area-container .users-target-list-wrapper .users-target-list .only-when-no-body {
+            display: none; }
+          .spaced-container .admin-view-content admin-controll-area .admin-control-area-container .users-target-list-wrapper .users-target-list.empty-list .only-when-no-body {
+            display: block;
+            padding-left: 24px; }
+
+.dialog-box {
+  width: 640px; }
+  .dialog-box .dialog-container {
+    padding: 36px 0px 45px 24px; }
+    .dialog-box .dialog-container .form-wrapper #modelForm {
+      margin: 0;
+      width: 100%; }
+      .dialog-box .dialog-container .form-wrapper #modelForm.centers-form .form-inputs-row {
+        height: 66px; }
+      .dialog-box .dialog-container .form-wrapper #modelForm .form-inputs-row {
+        height: 70px;
+        width: 100%; }
+        .dialog-box .dialog-container .form-wrapper #modelForm .form-inputs-row.no-image {
+          padding-left: 50px; }
+        .dialog-box .dialog-container .form-wrapper #modelForm .form-inputs-row.no-image-on-user {
+          padding-left: 86px; }
+        .dialog-box .dialog-container .form-wrapper #modelForm .form-inputs-row .img-wrapper {
+          margin: 5px 26px 0 0;
+          width: 24px;
+          height: 60px;
+          display: flex;
+          justify-content: flex-end;
+          position: relative; }
+          .dialog-box .dialog-container .form-wrapper #modelForm .form-inputs-row .img-wrapper.on-user-img {
+            width: 60px; }
+          .dialog-box .dialog-container .form-wrapper #modelForm .form-inputs-row .img-wrapper .userImg, .dialog-box .dialog-container .form-wrapper #modelForm .form-inputs-row .img-wrapper .icon-container {
+            display: block; }
+          .dialog-box .dialog-container .form-wrapper #modelForm .form-inputs-row .img-wrapper .userImg {
+            width: 100%;
+            height: 100%;
+            margin: auto; }
+          .dialog-box .dialog-container .form-wrapper #modelForm .form-inputs-row .img-wrapper .icon-container {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            top: 0;
+            right: 0;
+            opacity: .3; }
+            .dialog-box .dialog-container .form-wrapper #modelForm .form-inputs-row .img-wrapper .icon-container .icon-model {
+              width: 24px;
+              height: 24px; }
+          .dialog-box .dialog-container .form-wrapper #modelForm .form-inputs-row .img-wrapper .image-loader-wrapper {
+            position: absolute;
+            top: 72px;
+            width: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 48px;
+            overflow: hidden;
+            left: 0; }
+            .dialog-box .dialog-container .form-wrapper #modelForm .form-inputs-row .img-wrapper .image-loader-wrapper .image-loader {
+              width: 100%;
+              height: 100%;
+              opacity: 0;
+              position: absolute;
+              z-index: 2;
+              cursor: pointer;
+              transform: scale(1, 3);
+              top: -31px;
+              left: 0; }
+            .dialog-box .dialog-container .form-wrapper #modelForm .form-inputs-row .img-wrapper .image-loader-wrapper .photo-img, .dialog-box .dialog-container .form-wrapper #modelForm .form-inputs-row .img-wrapper .image-loader-wrapper .text {
+              position: relative;
+              display: block;
+              margin: 0 auto;
+              width: auto;
+              color: #4a90e2;
+              align-self: center; }
+            .dialog-box .dialog-container .form-wrapper #modelForm .form-inputs-row .img-wrapper .image-loader-wrapper .text {
+              margin-top: 3px; }
+        .dialog-box .dialog-container .form-wrapper #modelForm .form-inputs-row md-input-container {
+          width: 240px;
+          box-sizing: border-box;
+          height: 100%; }
+          .dialog-box .dialog-container .form-wrapper #modelForm .form-inputs-row md-input-container:first-of-type {
+            margin-right: 19px; }
+            .dialog-box .dialog-container .form-wrapper #modelForm .form-inputs-row md-input-container:first-of-type.email-input-wrapper {
+              margin-right: 0; }
+          .dialog-box .dialog-container .form-wrapper #modelForm .form-inputs-row md-input-container.middle-sized-width {
+            width: 257px; }
+          .dialog-box .dialog-container .form-wrapper #modelForm .form-inputs-row md-input-container.small-number-input, .dialog-box .dialog-container .form-wrapper #modelForm .form-inputs-row md-input-container.status-select-container {
+            width: 138px; }
+          .dialog-box .dialog-container .form-wrapper #modelForm .form-inputs-row md-input-container.big-name-input {
+            width: 376px; }
+          .dialog-box .dialog-container .form-wrapper #modelForm .form-inputs-row md-input-container.second-biggest-name-input {
+            width: 347px; }
+          .dialog-box .dialog-container .form-wrapper #modelForm .form-inputs-row md-input-container.full-input-wrapper {
+            width: 100%; }
+          .dialog-box .dialog-container .form-wrapper #modelForm .form-inputs-row md-input-container.contact-select-container {
+            width: 306px; }
+          .dialog-box .dialog-container .form-wrapper #modelForm .form-inputs-row md-input-container.contact-record-input {
+            width: 172px; }
+          .dialog-box .dialog-container .form-wrapper #modelForm .form-inputs-row md-input-container.md-input-focused label {
+            color: rgba(0, 0, 0, 0.54); }
+          .dialog-box .dialog-container .form-wrapper #modelForm .form-inputs-row md-input-container label {
+            color: rgba(0, 0, 0, 0.54); }
+          .dialog-box .dialog-container .form-wrapper #modelForm .form-inputs-row md-input-container input {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+            width: 100%; }
+            .dialog-box .dialog-container .form-wrapper #modelForm .form-inputs-row md-input-container input:focus {
+              border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
+          .dialog-box .dialog-container .form-wrapper #modelForm .form-inputs-row md-input-container md-select {
+            width: 100%; }
+    .dialog-box .dialog-container .success-message {
+      font-size: 16px;
+      line-height: 1.5;
+      color: rgba(51, 51, 51, 0.87); }
+  .dialog-box .dialog-actions-container {
+    height: 92px;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box; }
+    .dialog-box .dialog-actions-container button {
+      height: 36px;
+      width: 176px;
+      color: white;
+      padding: 10px 0; }
+      .dialog-box .dialog-actions-container button span {
+        font-size: 14px;
+        font-weight: 500;
+        width: 100%;
+        text-align: center;
+        display: block; }
+      .dialog-box .dialog-actions-container button.back-control {
+        margin-right: 20px;
+        background-color: #4a6176; }
+
+/*# sourceMappingURL=admin-main.css.map */

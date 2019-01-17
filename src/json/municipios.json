@@ -1,0 +1,81 @@
+{
+	"responseCode": {
+		"status": 200,
+		"descripcion": ""
+	},
+	"data": [
+		{
+			"name": "Aguascalientes"
+		},
+		{
+			"name": "Mexicali"
+		},
+		{
+			"name": "La Paz"
+		},
+		{
+			"name": "Campeche"
+		},
+		{
+			"name": "Saltillo"
+		},
+		{
+			"name": "Colima"
+		},
+		{
+			"name": "Tuxtla Gutiérrez"
+		},
+		{
+			"name": "Chihuahua"
+		},
+		{
+			"name": "Ciudad de México"
+		},
+		{
+			"name": "Durango"
+		},
+		{
+			"name": "Guanajuato"
+		},{
+			"name": "Chilpancingo"
+		},{
+			"name": "Pachuca"
+		},{
+			"name": "Guadalajara"
+		},{
+			"name": "Toluca"
+		},{
+			"name": "Morelia"
+		},{
+			"name": "Cuernavaca"
+		},{
+			"name": "Tepic"
+		},{
+			"name": "Monterrey"
+		},{
+			"name": "Oaxaca"
+		},{
+			"name": "Puebla"
+		},{
+			"name": "Querétaro"
+		},{
+			"name": "Chetumal"
+		},{
+			"name": "San Luís Potosí"
+		},{
+			"name": "Culiacán"
+		},{
+			"name": "Hermosillo"
+		},{
+			"name": "Villahermosa"
+		},{
+			"name": "Ciudad Victoria"
+		},{
+			"name": "Tlaxcala"
+		},{
+			"name": "Xalapa"
+		},{
+			"name": "Zacatecas"
+		}
+	]
+}

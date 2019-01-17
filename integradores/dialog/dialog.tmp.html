@@ -1,0 +1,189 @@
+<md-dialog class="dialog-box" ng-init="initialSetup()">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <div class="integrador-data-resume">
+              <span class="image-background-model integrador-img" ng-style="{'background-image': 'url(' + (target.profileImg ? target.profileImg : folderStructureUrl + 'src/images/myAvatar.png') + ')'}"></span>
+              <div class="integrador-info">
+                  <h2>{{target.userName}}</h2>
+                  <p>Clave: {{target.userId}}</p>
+              </div>
+            </div>
+            <md-button class="md-icon-button" aria-label ng-click="cancelDialog()">
+                <svg fill="#fff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                </svg>
+            </md-button>
+          </div>
+    </md-toolbar>
+    <md-dialog-content layout>
+        <div class="integradores-section poc-section" flex="33">
+            <div class="info-block">
+              <div class="poc-easy-data">
+                  <h3 class="poc-name">
+                    {{actualPOC.name}}
+                  </h3>
+                  <!-- <p class="poc-address">
+                    Sucursal: {{actualPOC.address}}
+                  </p> -->
+              </div>
+              <ul class="agent-contact-data">
+                  <li class="contact-itm">
+                    <span class="contact-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16" viewBox="0 0 20 16">
+                          <defs>
+                              <path id="a" d="M18 0H2C.9 0 .01.9.01 2L0 14c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V2l8 5 8-5v2z"/>
+                          </defs>
+                          <g fill="none" fill-rule="evenodd">
+                              <mask id="b" fill="#fff">
+                                  <use xlink:href="#a"/>
+                              </mask>
+                              <use fill="#4a90e2" fill-rule="nonzero" xlink:href="#a"/>
+                          </g>
+                      </svg>
+                    </span>
+                    <p class="contact-itm-value">
+                      {{target.cveEmail}}
+                    </p>
+                  </li>
+                  <li class="contact-itm">
+                    <span class="contact-icon">
+                      <svg fill="#4a90e2" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0 0h24v24H0z" fill="none"/>
+                          <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                      </svg>
+                    </span>
+                    <p class="contact-itm-value">
+                      {{target.cellPhoneNumber}}
+                    </p>
+                  </li>
+                  <li class="contact-itm">
+                    <span class="contact-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="22" viewBox="0 0 14 22">
+                          <defs>
+                              <path id="ac" d="M12 .01L2 0C.9 0 0 .9 0 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V2c0-1.1-.9-1.99-2-1.99zM12 18H2V4h10v14z"/>
+                          </defs>
+                          <g fill="none" fill-rule="evenodd">
+                              <mask id="b" fill="#fff">
+                                  <use xlink:href="#a"/>
+                              </mask>
+                              <use fill="#4a90e2" fill-rule="nonzero" xlink:href="#ac"/>
+                          </g>
+                      </svg>
+                    </span>
+                    <p class="contact-itm-value">
+                      IMEI: {{target.imei}}
+                    </p>
+                  </li>
+              </ul>
+            </div>
+
+            <button class="message-sending no-border-no-outline" ng-click="openMessageDialog($event, target)" layout="row" layout-align="space-between">
+                Enviar mensaje a {{target.userName.slice(0, target.userName.indexOf(' '))}}
+
+                <span class="icon-model icon-mail message-icon"></span>
+            </button>
+        </div>
+        <div class="integradores-section efficiency-section" flex="33">
+            <div class="month-selector-wrapper" layout>
+                <div class="select-text-leyend" flex="50">
+                    Ver rendimiento en:
+                </div>
+                <div class="select-container" flex="50">
+                    <md-select ng-model="workMonthSelected.month" class="md-select" placeholder="Mes de ...">
+                        <md-option ng-repeat="workMonth in workedMonths | orderBy: workMonth.monthName " ng-value="workMonth" ng-click="workingMonthSelection(workMonth)" ng-keyup="workingMonthSelection(workMonth)">
+                            {{workMonth.monthName}}
+                        </md-option>
+                    </md-select>
+                </div>    
+            </div>
+
+            <div class="working-results-stats" layout="column">
+                <h1 class="total-integrations-title" flex>
+                  {{totalIntegrations}} Integraciones registradas
+                </h1>
+
+                <div class="stats" layout flex>
+                    <div class="stats-canvas-wrapper" flex="40">
+                      <canvas id="doughnut" class="chart chart-doughnut" chart-colors="resultColors" chart-data="agentWorkStats" chart-labels="resultLabels"></canvas> 
+                    </div>
+                    <div class="stats-guide-wrapper" flex="40" flex-offset="10">
+                      <ul class="stats-meaning-list">
+                        <li class="stat-itm">
+                          <span class="result-color success"></span>
+                          <span class="result-text">Completados</span>
+                        </li>
+                        <li class="stat-itm">
+                          <span class="result-color not-starting"></span>
+                          <span class="result-text">Sin iniciar</span>
+                        </li>
+                        <li class="stat-itm">
+                          <span class="result-color pending"></span>
+                          <span class="result-text">Pendientes</span>
+                        </li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="integradores-section enterprise-integrations-section" flex="33">
+            <div class="select-wrapper">
+                <md-select ng-model="selectedEnterprise.name" class="md-select" placeholder="Empresa">
+                    <md-option ng-repeat="enterprise in availableEnterprises | orderBy: enterprise " ng-value="enterprise" ng-click="filteringByEnterprise(enterprise)" ng-keyup="filteringByEnterprise(enterprise)">
+                        {{enterprise}}
+                    </md-option>
+                </md-select>
+            </div>
+            <div class="list-wrapper">
+              <ul class="integrations-per-enterprise-list">
+                <li class="integration-itm" ng-class="{'blue-label': integration.status === 'pending', 'red-label': integration.status === 'notStarting', 'green-label': integration.status === 'success' }" ng-repeat="integration in filteredIntegrations">
+                    <p class="employee-name">
+                      {{integration.personName}}
+                    </p>
+                    <div class="identifiers-data-wrapper">
+                      <span class="itm-span">Cuenta: {{integration.account}}</span>
+                      <span class="itm-span">Folio: {{integration.id}}</span>
+                      <span class="itm-span">Contrato: {{integration.contractNumber}}</span>
+                      <span class="itm-span"> <span class="timer-span icon-model icon-timer"></span> 12 min</span>
+                    </div>
+                </li>
+              </ul>
+            </div>
+        </div>
+    </md-dialog-content>
+</md-dialog>
+<div class="message-full-width-wrapper no-border-no-outline" ng-if="isMessageDialog" ng-click="cancelDialogMessageDialog($event)">
+    <div class="message-dialog-box" aria-label="accounts-actions-controlls">
+
+        <md-toolbar class="dialog-header">
+          <div class="md-toolbar-tools">
+            <h2>Enviar mensaje a {{target.userName.slice(0, target.userName.indexOf(' '))}}</h2>
+            <span flex></span>
+            <md-button class="md-icon-button" aria-label ng-click="cancelDialogMessageDialog()">
+                <svg fill="#fff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                </svg>
+            </md-button>
+          </div>
+        </md-toolbar>
+
+        <div class="dialog-container" layout="column">
+          <div class="input-wrapper" layout flex="noshrink">
+            <input type="text" class="integrator-searcher no-border-no-outline" placeholder="Título del mensaje" flex="100" ng-model="message.title">
+          </div>
+
+          <div class="text-area-wrapper" layout>
+            <textarea ng-model="message.body" flex="100" class="no-border-no-outline" placeholder="Mensaje (máximo 1500 caracteres)"></textarea>
+          </div>
+          
+        </div>
+
+        <div layout class="dialog-actions-container" layout-align="center">
+            <button ng-disabled="!message.body.length || !message.title.length" class="dialog-accepting-button no-border-no-outline" ng-click="sendMessage()">
+              ENVIAR MENSAJE
+            </button>
+        </div>
+
+    </div>
+</div>

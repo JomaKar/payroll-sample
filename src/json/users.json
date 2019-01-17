@@ -1,0 +1,15 @@
+{
+	"responseCode": {
+		"status": 200,
+		"descripcion": ""
+	},
+	"data": {
+		"name": "José María",
+		"token": 3241243,
+		"cellPhoneNumber": 5581827798,
+		"phoneNumber": 52432695,
+		"cveEmail": "jom@j.com",
+		"rol": "ADMINISTRADOR",
+		"img": "src/images/avatar-1.jpg"
+	}
+}

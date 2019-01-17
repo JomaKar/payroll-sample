@@ -1,0 +1,57 @@
+<div layout='column' class="accounts-control-area-container" ng-init="initAccountsFunc()">
+
+	<div class="controllers-panel" layout="column" md-whiteframe="2">
+		<div class="filter-top-section" layout>
+			<div class="enterprise-selector-wrapper" flex="50">
+				<md-select aria-label="companies" ng-model="specificEnterprise.name" placeholder="Empresa" class="md-no-underline" ng-change="onChangeCompany()">
+                    <md-option ng-repeat="company in enterprisesList" ng-value="company.name" >
+                        {{company.name}}
+                    </md-option>
+                </md-select>
+			</div>
+			<div class="search-input-wrapper" flex="50" layout>
+				<input type="number" class="no-border-no-outline" ng-model="accountToSearch" flex="90" placeholder="Buscar cuenta, folio" ng-keyup="searchingAccount($event)">
+				<span class="icon-model icon-search"></span>
+			</div>
+		</div>
+		<div class="active-controllers-bottom-section" layout layout-align="space-between">
+			<md-checkbox md-no-ink aria-label="Select All" ng-click="toggleAll()" ng-checked="isChecked()">
+              Seleccionar todo
+            </md-checkbox>
+
+            <div class="kill-assign-controllers-container" layout>
+            	<button class="garbage-button no-border-no-outline" ng-disabled="actionNotAvailable" ng-click="accountsDialogShow($event, 'delete')">
+            		<span class="icon-model icon-garbage-bin"></span>
+            	</button>
+            	<button ng-disabled="actionNotAvailable" class="assign-button no-border-no-outline" ng-click="accountsDialogShow($event, 'assign')">
+            		{{actionText}}
+            	</button>
+            </div>
+		</div>
+	</div>
+
+	<div class="accounts-list-wrapper" layout md-whiteframe="2">
+		<ul class="accounts-list">
+			<li class="account-item" ng-repeat="account in accountsList" layout ng-class="{selectedItm: selectedItems.indexOf(account) > -1}">
+				<md-checkbox md-no-ink layout flex="100" ng-checked="exists(account, selectedItems)" ng-click="toggle(account, selectedItems)">
+					<div class="account-name" flex="50">
+						{{account.personName}}
+					</div>
+					<div class="account-key account-details-itm" flex="20">
+						{{account.account}}
+					</div>
+					<div class="account-record account-details-itm" flex="20">
+						Folio: {{account.contractNumber}}
+					</div>
+					<div class="account-status account-details-itm" flex="10">
+						{{(account.status == 'notStarting') ? 'No iniciado' : (account.status == 'pending') ? 'Pendiente' : 'Hecho' }}
+					</div>
+	            </md-checkbox>
+			</li>
+			<li class="account-item only-when-no-body">
+	          No encontramos a nadie bajo ese criterio
+	        </li>
+		</ul>
+	</div>
+	
+</div>

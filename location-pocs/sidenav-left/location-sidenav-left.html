@@ -1,0 +1,100 @@
+<md-sidenav class="md-sidenav-left on-pocs-map" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" id="sidenav-left" ng-style="objStyleWrapperHeightContent" ng-init="initFunc()">
+
+    <!--<md-content layout-padding  id="payroll-web-left" >-->
+    <md-content layout-padding id="payroll-web-left">
+        <!-- Inicio #wrapper-select-state-pocs -->
+        <div id="wrapper-select-state-pocs" class="on-pocs-map"  md-whiteframe="6" layout="row" >
+            <div flex="50" class="select-state">
+                <md-select ng-model="statesSelected.name" placeholder="Estado" ng-change="onChangeEstado(statesSelected.name)">
+                    <md-option ng-repeat="state in targetsFirstSelect" ng-value="state.name" >
+                        {{state.name}}
+                    </md-option>
+                </md-select>
+            </div>
+            <div flex="50" class="select-pocs">
+                <md-select ng-model="pocSelected.id" placeholder="Pocs" ng-change="onChangePocs(pocSelected.id)">
+                    <md-option ng-repeat="poc in pocs" ng-value="poc.id" >
+                        {{poc.name}}
+                    </md-option>
+                </md-select>
+            </div>
+        </div>
+        <!-- Fin #wrapper-select-state-pocs -->
+        
+        <!-- Inicio #wrapper-info-poc -->
+        <div id="wrapper-info-poc" class="on-pocs-map"  md-whiteframe="6" >
+            <md-toolbar class="md-hue-2" id="toolbar-title-poc">
+                <div layout="row">
+                    <div flex="90" class="title">{{actualPoc.name}}</div>
+                </div>
+            </md-toolbar>
+            <div id="wrapper-location-poc" class="padding-wrapper">
+                <div layout="row">
+                    <div flex="15">
+                        <span class="icon-model icon-location-on"></span>
+                    </div>
+                    <!-- <div flex="85" class="text-location">{{poc.address}}</div> -->
+                </div>
+                <div layout="row" class="margin-top-12">
+                    <div flex="15">
+                        <span class="icon-model icon-recent-actors"></span>
+                    </div>
+                    <div flex="85" class="text-location">{{ pocAgents.length}} asesores autorizados</div>
+                </div>
+            </div>
+            <md-divider ng-if="!$last"></md-divider>
+            <div layout="row" class="padding-wrapper" id="wrapper-title-statistics" ng-show="hideShowInfoPoc">
+                <div flex="90" class="ver-estadsticas">Estadisticas</div>
+                <button flex="10" ng-disabled="!targetsAvailable" ng-click="showAdvanced($event)" class="open-statics-button-wrapper no-border-no-outline">
+                    <span class="icon-model icon-fullscreen"></span>
+                </button>
+            </div>
+         </div>
+         <!-- Fin #wrapper-info-poc -->
+         
+        <div id="wrapper-table" flex class="column-members" ng-style="objStyleWrapperTable" md-whiteframe="6">
+            <div layout="row" id="find-asesor">
+                <div class="input-container" flex="80" layout>
+                    <input type="text" class="no-border-no-outline" placeholder="Buscar" ng-keyup="searchAgent($event)" />
+                    <span class="icon-model icon-search"></span>
+                </div>
+                <div class="order-select-wrapper" flex="20" flex="initial">
+                    <md-select ng-model="agentsOrder" class="md-select md-no-underline" placeholder="A-Z">
+                        <md-option ng-repeat="orderOption in agentsPossibleOrders" ng-value="orderOption.val">
+                            {{orderOption.text}}
+                        </md-option>
+                    </md-select>
+                </div>
+            </div> 
+            <ul class="left-side-agents-list">
+                <li class="letter-itm" ng-repeat="letterBlock in orderedAgents | orderBy : 'letter' : agentsOrder">
+                    <div class="letter-header"> {{letterBlock.letter}} </div>
+                    <div class="agent-itm no-border-no-outline" ng-repeat="member in letterBlock.agents | orderBy: 'userName' : agentsOrder" ng-click="showDetails($event, member)" ng-class="'marker-attached-' + member.userId">
+                        <span class="agent-img image-background-model" ng-style="{'background-image': 'url(' + (member.profileImg ? member.profileImg : folderStructureUrl + 'src/images/myAvatar.png') + ')'}"></span>
+                        <div class="md-list-item-text no-border-no-outline" layout="column">
+                            <div class="md-caption name">{{member.userName}}</div>
+                            <div class="text-id-member clave">Clave: {{member.userId}}</div>
+                            <div layout="row" layout-wrap class="bar-integrations" flex>
+                                <div class="not-starting-integrations c-red" ng-style="{width: (member.integrations.notStarting / (member.integrations.total / 100)) + '%'}"></div>
+                                <div class="pending-integrations c-blue" ng-style="{width: (member.integrations.pending / (member.integrations.total / 100)) + '%'}"></div>
+                                <div class="success-integrations c-green" ng-style="{width: (member.integrations.success / (member.integrations.total / 100)) + '%'}"></div>
+                            </div>
+                            <div class="text-integrations-member ints">{{member.integrations.success}} integraciones realizadas este mes</div>
+                            
+                        </div>
+                        <div layout="column" flex="10" class="details-arrow-wrapper no-border-no-outline">
+                            <span class="icon-model icon-triangle-arrow-border no-border-no-outline"></span>
+                            <span class="close-span no-border-no-outline" ng-click="hideDetails(); $event.stopPropagation();">
+                                X
+                            </span>
+                        </div>                        
+                    </div>
+                </li>
+
+                <li class="no-body">
+                    No se encontró nadie con ese criterio
+                </li>
+            </ul>
+        </div>
+    </md-content>
+</md-sidenav>

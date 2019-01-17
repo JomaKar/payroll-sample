@@ -1,0 +1,26 @@
+{
+	"responseCode": {
+		"status": 200,
+		"message": "wths"
+	},
+	"data":[
+		{
+			"name": "Wallmart"
+		},
+		{
+			"name": "Sanborns"
+		},
+		{
+			"name": "DHL"
+		},
+		{
+			"name": "inmobiliaria24"
+		},
+		{
+			"name": "Tumsa"
+		},
+		{
+			"name": "McDonalds"
+		}
+	]
+}

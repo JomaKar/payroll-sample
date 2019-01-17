@@ -1,0 +1,351 @@
+{
+    "responseCode": {
+        "status": 200,
+        "descripcion": ""
+    },
+    "data": {
+        "admin": [
+            {
+                "userId": 23,
+                "userName": "Mathias Goeritz",
+                "cellPhoneNumber": 722789823872,
+                "phoneNumber": 56873243,
+                "cveEmail": "mathias@hsbc.com.mx",
+                "haveLeader": false,
+                "leaderId": null,
+                "leaderName": null,
+                "status": 1,
+                "rol": "Administrador"
+            },
+            {
+                "userId": 21,
+                "userName": "Hernández Gómez Ernesto",
+                "cellPhoneNumber": 7989789823872,
+                "phoneNumber": 568799943,
+                "cveEmail": "neto@hsbc.com.mx",
+                "haveLeader": false,
+                "leaderId": null,
+                "leaderName": null,
+                "status": 0,
+                "rol": "Administrador"
+            },
+            {
+                "userId": 22,
+                "userName": "Gabriela Solar del Avispero",
+                "cellPhoneNumber": 722989989872,
+                "phoneNumber": 56003243,
+                "cveEmail": "gaby@hsbc.com.mx",
+                "haveLeader": false,
+                "leaderId": null,
+                "status": 1,
+                "rol": "Administrador"
+            }
+        ],
+        "subdirectores": [
+            {
+                "userId": 382397,
+                "userName": "Angélica Peralta Ortiz",
+                "cellPhoneNumber": 888938272,
+                "phoneNumber": 7873982,
+                "cveEmail": "angy@hsbc.com.mx",
+                "haveLeader": false,
+                "leaderId": null,
+                "leaderName": null,
+                "status": 1,
+                "rol": "Subdirector"
+            },
+            {
+                "userId": 9382112,
+                "userName": "Jimena Sariñana",
+                "cellPhoneNumber": 889273809,
+                "phoneNumber": 7892302,
+                "cveEmail": "jimena@hsbc.com.mx",
+                "haveLeader": false,
+                "leaderId": null,
+                "leaderName": null,
+                "status": 0,
+                "rol": "Subdirector"
+            },
+            {
+                "userId": 936782393,
+                "userName": "José Luís Franco",
+                "cellPhoneNumber": 86325178,
+                "phoneNumber": 777298342,
+                "cveEmail": "pepe@hsbc.com.mx",
+                "haveLeader": false,
+                "leaderId": null,
+                "leaderName": null,
+                "status": 0,
+                "rol": "Subdirector"
+            },
+            {
+                "userId": 73829342342,
+                "userName": "Eleonora de la Cortina",
+                "cellPhoneNumber": 8821312,
+                "phoneNumber": 36638237,
+                "cveEmail": "eleonora@hsbc.com.mx",
+                "haveLeader": false,
+                "leaderId": null,
+                "leaderName": null,
+                "status": 1,
+                "rol": "Subdirector"
+            }
+        ],
+        "supervisores": [
+            {
+                "userId": 89837234,
+                "userName": "Juan Luís de Alarcón",
+                "cellPhoneNumber": 98982913,
+                "phoneNumber": 8789323,
+                "cveEmail": "juan@hsbc.com.mx",
+                "haveLeader": true,
+                "leaderName": "Angélica Peralta Ortiz",
+                "leaderId": 382397,
+                "status": 1,
+                "rol": "Supervisor"
+            },
+            {
+                "userId": 4809890123,
+                "userName": "Leonora Carrington",
+                "cellPhoneNumber": 887893892,
+                "phoneNumber": 9090324,
+                "cveEmail": "leonora@hsbc.com.mx",
+                "haveLeader": true,
+                "leaderName": "Jimena Sariñana",
+                "leaderId": 9382112,
+                "status": 0,
+                "rol": "Supervisor"
+            },
+            {
+                "userId": 7392384,
+                "userName": "Pikachú y Ash Hilton",
+                "cellPhoneNumber": 8738924,
+                "phoneNumber": 993123122,
+                "cveEmail": "pikaAsh@hsbc.com.mx",
+                "haveLeader": true,
+                "leaderName": "Eleonora de la Cortina",
+                "leaderId": 73829342342,
+                "status": 1,
+                "rol": "Supervisor"
+            },
+            {
+                "userId": 220209123,
+                "userName": "Simone Crimenea Justice",
+                "cellPhoneNumber": 55434532,
+                "phoneNumber": 4323423,
+                "cveEmail": "simone@hsbc.com.mx",
+                "haveLeader": true,
+                "leaderName": "José Luís Franco",
+                "leaderId": 936782393,
+                "status": 0,
+                "rol": "Supervisor"
+            },
+            {
+                "userId": 455232431,
+                "userName": "Francisco Federico Fidel",
+                "cellPhoneNumber": 9839243,
+                "phoneNumber": 222313141,
+                "cveEmail": "paco@hsbc.com.mx",
+                "haveLeader": true,
+                "leaderName": "Angélica Peralta Ortiz",
+                "leaderId": 382397,
+                "status": 1,
+                "rol": "Supervisor"
+            }
+        ],
+        "integradores": [
+            {
+                "userId": 88979879,
+                "userName": "Omar de la Sierra",
+                "cellPhoneNumber": 676768687,
+                "phoneNumber": 230909012,
+                "cveEmail": "omar@hsbc.com.mx",
+                "haveLeader": true,
+                "leaderName": "Francisco Federico Fidel",
+                "leaderId": 455232431,
+                "status": 1,
+                "latitude": 19.4169126,
+                "longitude": -99.1573704,
+                "rol": "Integrador"
+            },
+            {
+                "userId": 4700989323,
+                "userName": "Esteban Jiménez",
+                "cellPhoneNumber": 772039420123,
+                "phoneNumber": 56223984,
+                "cveEmail": "esteban@hsbc.com.mx",
+                "haveLeader": true,
+                "leaderName": "Simone Crimenea Justice",
+                "leaderId": 220209123,
+                "status": 1,
+                "latitude": 19.4169126,
+                "longitude": -99.1573705,
+                "rol": "Integrador"
+            },
+            {
+                "userId": 45090234232,
+                "userName": "Chimoltrufia Enriqueta López",
+                "cellPhoneNumber": 99898324,
+                "phoneNumber": 323423423,
+                "cveEmail": "chimoltru@hsbc.com.mx",
+                "haveLeader": true,
+                "leaderName": "Pikachú y Ash Hilton",
+                "leaderId": 7392384,
+                "status": 0,
+                "latitude": 19.4169125,
+                "longitude": -99.1573704,
+                "rol": "Integrador"
+            },
+            {
+                "userId": 3423262626,
+                "userName": "Alejandra Fabiola Ruíz",
+                "cellPhoneNumber": 99938239,
+                "phoneNumber": 443323231,
+                "cveEmail": "alexa@hsbc.com.mx",
+                "haveLeader": true,
+                "leaderName": "Pikachú y Ash Hilton",
+                "leaderId": 7392384,
+                "status": 1,
+                "latitude": 19.4169124,
+                "longitude": -99.1573706,
+                "rol": "Integrador"
+            },
+            {
+                "userId": 7787236842,
+                "userName": "Jamiroquoi Lazer Plise",
+                "cellPhoneNumber": 98223421,
+                "phoneNumber": 832893742,
+                "cveEmail": "jami@hsbc.com.mx",
+                "haveLeader": true,
+                "leaderName": "Pikachú y Ash Hilton",
+                "leaderId": 7392384,
+                "status": 1,
+                "latitude": 19.4169127,
+                "longitude": -99.1573706,
+                "rol": "Integrador"
+            },
+            {
+                "userId": 33224241551,
+                "userName": "María Luisa de las Nieves",
+                "cellPhoneNumber": 990923423,
+                "phoneNumber": 778932934,
+                "cveEmail": "mary@hsbc.com.mx",
+                "haveLeader": true,
+                "leaderName": "Francisco Federico Fidel",
+                "leaderId": 455232431,
+                "status": 0,
+                "latitude": 19.4169127,
+                "longitude": -99.1573708,
+                "rol": "Integrador"
+            },
+            {
+                "userId": 8222278913,
+                "userName": "José de la Cueva",
+                "cellPhoneNumber": 99382342,
+                "phoneNumber": 7798234,
+                "cveEmail": "jose@hsbc.com.mx",
+                "haveLeader": true,
+                "leaderName": "Francisco Federico Fidel",
+                "leaderId": 455232431,
+                "status": 1,
+                "latitude": 19.4169126,
+                "longitude": -99.1573705,
+                "rol": "Integrador"
+            },
+            {
+                "userId": 33377788273,
+                "userName": "Diego Rivera",
+                "cellPhoneNumber": 67621687,
+                "phoneNumber": 230909999,
+                "cveEmail": "diego@hsbc.com.mx",
+                "haveLeader": true,
+                "leaderName": "Alejandra Fabiola Ruíz",
+                "leaderId": 3423262626,
+                "status": 0,
+                "latitude": 19.4169125,
+                "longitude": -99.1573704,
+                "rol": "Integrador"
+            },
+            {
+                "userId": 155551938,
+                "userName": "Ricardo Ricón Canayín",
+                "cellPhoneNumber": 9993280342,
+                "phoneNumber": 37678234,
+                "cveEmail": "richi@hsbc.com.mx",
+                "haveLeader": true,
+                "leaderName": "Alejandra Fabiola Ruíz",
+                "leaderId": 3423262626,
+                "status": 1,
+                "latitude": 19.4169124,
+                "longitude": -99.1573705,
+                "rol": "Integrador"
+            },
+            {
+                "userId": 99989834442,
+                "userName": "Andrés Manuel López Obrador",
+                "cellPhoneNumber": 5555918231,
+                "phoneNumber": 99923423,
+                "cveEmail": "amlo@hsbc.com.mx",
+                "haveLeader": true,
+                "leaderName": "Alejandra Fabiola Ruíz",
+                "leaderId": 3423262626,
+                "status": 1,
+                "latitude": 19.4169125,
+                "longitude": -99.1573706,
+                "rol": "Integrador"
+            },
+            {
+                "userId": 84242420092,
+                "userName": "Ericka Hernández Guadalupe",
+                "cellPhoneNumber": 88783923,
+                "phoneNumber": 33728732,
+                "cveEmail": "ericka@hsbc.com.mx",
+                "haveLeader": true,
+                "leaderName": "Pikachú y Ash Hilton",
+                "leaderId": 7392384,
+                "status": 0,
+                "latitude": 19.4169127,
+                "longitude": -99.1573704,
+                "rol": "Integrador"
+            }
+        ],
+        "documentadores": [
+            {
+                "userId": 66692384,
+                "userName": "Paquita la del Barrio",
+                "cellPhoneNumber": 444553535,
+                "phoneNumber": 33242424666,
+                "cveEmail": "lapaquita@hsbc.com.mx",
+                "haveLeader": true,
+                "leaderName": "Mathias Goeritz",
+                "leaderId": 23,
+                "status": 0,
+                "rol": "Documentador"
+            },
+            {
+                "userId": 5559928342,
+                "userName": "Emir Kusturica",
+                "cellPhoneNumber": 8898797221,
+                "phoneNumber": 7789323,
+                "cveEmail": "emir@hsbc.com.mx",
+                "haveLeader": true,
+                "leaderName": "Gabriela Solar del Avispero",
+                "leaderId": 22,
+                "status": 1,
+                "rol": "Documentador"
+            },
+            {
+                "userId": 7768687323,
+                "userName": "Gorbachov",
+                "cellPhoneNumber": 778612873,
+                "phoneNumber": 9908023423,
+                "cveEmail": "gorvachov@hsbc.com.mx",
+                "haveLeader": true,
+                "leaderName": "Juan Luís de Alarcón",
+                "leaderId": 21,
+                "status": 1,
+                "rol": "Documentador"
+            }
+        ]
+    }
+}

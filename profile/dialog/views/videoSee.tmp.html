@@ -1,0 +1,26 @@
+<div class="video-dialog-content-wrapper" ng-init="setVideoHeight()">
+	<div class="video-wrapper">
+		<video width="100%" height="auto" controls autoplay ng-src="{{target.videoUrl | trustUrl}}">
+		</video>
+	</div>
+	<div class="micro-info-wrapper">
+		<h3 class="video-title">
+			{{target.title}}
+		</h3>
+		<p class="video-duration">
+			Duración: {{target.duration}}
+		</p>
+	</div>
+	<div class="actions-wrapper" ng-if="headerText !== 'Tutorial'">
+		<button class="dialog-rejecting-button no-border-no-outline" ng-click="deleteVideo()">
+			ELIMINAR VIDEO
+		</button>
+		<button class="dialog-accepting-button no-border-no-outline" ng-click="actionForward('toEdit')">
+			EDITAR VIDEO
+		</button>
+	</div>
+	<hr>
+	<div class="resume-wrapper">
+		{{target.resume}}
+	</div>
+</div>

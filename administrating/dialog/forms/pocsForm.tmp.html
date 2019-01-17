@@ -1,0 +1,73 @@
+<form id="modelForm" layout="column" ng-init="basicSetup(templateForm)" name="templateForm" ng-blur="validateForm(templateForm)" ng-click="validateForm(templateForm)" ng-keyup="validateForm(templateForm)" class="no-border-no-outline">
+	<div class="form-inputs-row first-definition-row" layout>
+		<div class="img-wrapper">
+			<span class="icon-container">
+				<span class="icon-model icon-info-outline"></span>
+			</span>
+		</div>
+		<div class="inputs-wrapper">
+			<md-input-container class="registration-record-input small-number-input">
+				<label class="no-color-on-focus">Número</label>
+				<input name="pocId" notempty required type="number" ng-model="target.id">
+			</md-input-container>
+			<md-input-container class="registration-name-input big-name-input">
+				<label class="no-color-on-focus">Nombre</label>
+				<input name="pocName" notempty required type="text" ng-model="target.name">
+			</md-input-container>
+		</div>
+	</div>
+	<div class="form-inputs-row contact-reference-row" layout>
+		<div class="img-wrapper">
+			<span class="icon-container">
+				<span class="icon-model icon-people"></span>
+			</span>
+		</div>
+		<div class="inputs-wrapper">
+			<md-input-container class="second-biggest-name-input">
+				<label class="no-color-on-focus">Subdirector</label>
+				<md-select name="subdirectorName" required ng-model="target.subdirector.name" ng-change="validateForm(templateForm)">
+					<md-option ng-repeat="subdirector in pocsSubdirectors" ng-value="subdirector.name" ng-click="contactReferenceChange(subdirector.id, 'subdirector')" ng-keydown="contactReferenceChange(subdirector.id, 'subdirector')">
+						{{subdirector.name}}
+					</md-option>
+				</md-select>
+			</md-input-container>
+			<md-input-container class="contact-record-input">
+				<label class="no-color-on-focus">Registro del Subdirector</label>
+				<input name="subdirectorID" notempty required type="number" ng-model="target.subdirector.id">
+			</md-input-container>
+		</div>
+	</div>
+	<div class="form-inputs-row contact-reference-row no-image" layout>
+		<div class="inputs-wrapper">
+			<md-input-container class="second-biggest-name-input">
+				<label class="no-color-on-focus">Supervisor</label>
+				<md-select name="supervisorName" required ng-model="target.supervisor.name" ng-change="validateForm(templateForm)">
+					<md-option ng-repeat="supervisor in pocsSupervisors" ng-value="supervisor.name" ng-click="contactReferenceChange(supervisor.id, 'supervisor')" ng-keydown="contactReferenceChange(supervisor.id, 'supervisor')">
+						{{supervisor.name}}
+					</md-option>
+				</md-select>
+			</md-input-container>
+			<md-input-container class="contact-record-input">
+				<label class="no-color-on-focus">Registro del Supervisor</label>
+				<input name="supervisorID" notempty required type="number" ng-model="target.supervisor.id">
+			</md-input-container>
+		</div>
+	</div>
+	<div class="form-inputs-row status-row" layout>
+		<div class="img-wrapper">
+			<span class="icon-container">
+				<span class="icon-model icon-power-on"></span>
+			</span>
+		</div>
+		<div class="inputs-wrapper">
+			<md-input-container class="status-select-container">
+				<label class="no-color-on-focus">Estatus</label>
+				<md-select name="status" required ng-model="target.status" ng-change="validateForm(templateForm)">
+					<md-option ng-value="status.val" ng-repeat="status in statusOptions">
+						{{status.name}}
+					</md-option>
+				</md-select>
+			</md-input-container>
+		</div>
+	</div>
+</form>

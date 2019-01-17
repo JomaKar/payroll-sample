@@ -1,0 +1,51 @@
+<div class="contentLeftLocation">
+    <md-sidenav class="md-sidenav-left admin-left-side" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+
+
+        <div id="wrapper-select-state-pocs"  md-whiteframe="2" layout="row" >
+            <div flex="100" class="select-state">
+                <md-select ng-model="firstSelectResult.name" aria-label="first-select" ng-attr-placeholder="{{firstSelectPlaceholder}}" ng-change="onChangeFirstSelect()">
+                    <md-option ng-repeat="itmTarget in targetsFirstSelect" ng-value="itmTarget.name" >
+                        {{itmTarget.name}}
+                    </md-option>
+                </md-select>
+            </div>
+        </div>
+        
+        <div id="wrapper-info-poc"  md-whiteframe="2" layout="column" ng-class="{onlySelectHeight: secondSelectVisible, fullHeight: fullArea}">
+            <div class="admin-pocs-select-wrapper" layout ng-if="secondSelectVisible">
+                <md-select ng-model="ssSelectedOption.obj" aria-label="second-select" flex ng-attr-placeholder="{{secondSelectPlaceholder}}" class="md-no-underline" ng-change="onChangeSecondSelect()">
+                    <md-option ng-repeat="itmTargetSec in targetsSecondSelect" ng-value="itmTargetSec" >
+                        {{itmTargetSec.name}}
+                    </md-option>
+                </md-select>
+            </div>
+
+            <div class="padding-wrapper poc-members-wrapper" layout="column" ng-if="fullArea">
+                <p class="target-users-to-see-control-title">
+                    Selecciona el tipo de usuario:
+                </p>
+                <md-radio-group ng-model="visibleUsers.rol" ng-change="whichUsers()">
+
+                    <md-radio-button value="admin" class="md-primary">
+                        Administrador
+                    </md-radio-button>
+                    <md-radio-button value="subdirectores" class="md-primary">
+                        Subdirector
+                    </md-radio-button>
+                    <md-radio-button value="supervisores" class="md-primary">
+                        Supervisor
+                    </md-radio-button>
+                    <md-radio-button value="integradores" class="md-primary">
+                        Integrador
+                    </md-radio-button>
+                    <md-radio-button disabled value="documentadores" class="md-primary">
+                        Documentador
+                    </md-radio-button>
+
+                </md-radio-group>
+            </div>
+        </div>
+
+    </md-sidenav>
+</div>
